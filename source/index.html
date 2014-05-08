@@ -1,0 +1,144 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>StreamingService - SERVERNAME</title>
+
+<!--Detect Mobile Browser OR screen size-->
+<script type="text/javascript" src="musicserver/js/detectmobilebrowser.js" /></script>
+<script type="text/javascript">
+<!--
+if (screen.width <= 960) {
+	document.location = "musicserver/mobile";
+}
+//-->
+</script>
+
+
+<!--JQUERY LIBARIES + HTML5 SHIV-->
+<!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="musicserver/js/jquery-2.1.0.min.js"></script>
+<!--<![endif]-->
+<script src="musicserver/js/jquery-ui-1.10.4.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="musicserver/css/jquery-ui-1.10.4.custom.css">
+
+<link rel="stylesheet" type="text/css" href="musicserver/css/cssreset-min.css">
+
+<link rel="stylesheet" type="text/css" href="musicserver/css/style.css">
+
+<link href="musicserver/favicon.ico" type="image/x-icon" rel="shortcut icon">
+
+<!-- jScrollPane -->
+<link href="musicserver/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script src="musicserver/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--MEDIAELEMENT.JS + PLAYLIST PLUGIN-->
+<script src="musicserver/mediaelement/mediaelement-and-player.min.js"></script>
+<link rel="stylesheet" type="text/css" href="musicserver/mediaelement/mediaelementplayer.css">
+
+<script src="musicserver/js/jquery.shuffle.min.js"></script>
+<script src="musicserver/js/playlist.js"></script>
+<link rel="stylesheet" type="text/css" href="musicserver/css/playlist.css">
+<link href="musicserver/qtip/jquery.qtip.css" rel="stylesheet" type="text/css" />
+<script src="musicserver/qtip/jquery.qtip.min.js"></script>
+<script src="musicserver/qtip/imagesloaded.pkg.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<div id="sidebar">
+        	<div id="side-tracks">
+                <ul class="mejs-list">
+                </ul>
+			</div>
+        	<div id="side-buttons">
+				<a id="settings"></a>
+				<a id="info" onClick="Alert()" title="How to use Music Server"></a>
+				<a id="wrong"></a>
+				<a id="server"></a>
+				<a id="lock"></a>
+            </div>
+        </div>
+    	<header>
+			<div id="logo">
+            </div>
+            <div id="headertext">
+            	<span>SERVERNAME</span>
+                <span>Tip of the day: double click on a track to play</span>
+                <span></span>
+            </div>
+        </header>
+        <div id="content-wrap">
+            <div id="content">
+			</div>
+            <div id="playlist"></div>
+        </div>
+        <div id="player-wrap">
+        	<div class="title-player"><span></span></div>
+            <div class="artist-album"><span></span></div>
+			<div class="cover"></div>
+            <div class="audio-player">
+                <div class="controls">
+                    <div id="prev"></div>
+                    <div id="play"></div>
+					<div id="pause"></div>
+                    <div id="next"></div>
+                    <div id="shuffle"></div>
+                </div>
+                <audio id="mejs" src="dummy" type="audio/wav" onerror="$('#next').click();createGrowl();" controls></audio>
+            </div>
+        </div>
+	</div>
+
+    <footer>
+    	<div id="copyright">
+        	<span>Copyright &copy; 2014 StreamingService, Nederland | Alle rechten voorbehouden</span>
+        </div>
+    </footer>
+    
+    <div id="qtip-growl-container"></div>
+    
+<script>
+    (function($) {
+        $(window).load(function() {
+            $("#side-tracks").mCustomScrollbar({
+                scrollInertia: 500
+            });
+            $(".mejs-list").sortable({
+                scroll: false,
+                axis: "y",
+                change: function(event, ui) {
+                    var p = ui.position.top,
+                        h = ui.helper.outerHeight(true),
+                        s = ui.placeholder.position().top,
+                        elem = $("#side-tracks .mCustomScrollBox")[0],
+                        elemHeight = $("#side-tracks .mCustomScrollBox").height();
+                    pos = findPos(elem),
+                    mouseCoordsY = event.pageY - pos[0];
+                    if (mouseCoordsY < h || mouseCoordsY > elemHeight - h) {
+                        $("#side-tracks").mCustomScrollbar("scrollTo", p - (elemHeight / 2));
+                    }
+                }
+            });
+
+            function findPos(obj) {
+                var curleft = curtop = 0;
+                if (obj.offsetParent) {
+                    curleft = obj.offsetLeft;
+                    curtop = obj.offsetTop;
+                    while (obj = obj.offsetParent) {
+                        curleft += obj.offsetLeft;
+                        curtop += obj.offsetTop;
+                    }
+                }
+                return [curtop, curleft];
+            }
+        });
+    })(jQuery);
+</script>
+
+</body>
+</html>

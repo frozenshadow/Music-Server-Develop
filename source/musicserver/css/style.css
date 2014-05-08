@@ -1,0 +1,323 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Main page BEGIN*/
+html, body {
+	background-color: #cacaca;
+	font-family: Segoe UI, Arial;
+	height: 100%;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+/*Main page END*/
+
+/*Sidebar BEGIN*/
+
+#sidebar {
+    background-color: #323232;
+    float: left;
+    height: 662px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 250px;
+}
+
+#side-tracks {
+	margin-top: 10px;
+	height: 578px;
+	overflow: auto;
+}
+
+.mejs-list li {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    height: 63px;
+    margin: 20px;
+    position: relative;
+    width: 208px;
+}
+
+.mejs-list li:hover {
+	background-color: #215CAC;
+	cursor: pointer;
+}
+
+.mejs-list li.current {
+	background-color: #cddfff;
+}
+
+.mejs-list li img {
+    border-right: 1px solid #FFFFFF;
+    float: left;
+    height: 63px;
+    width: 63px;
+}
+
+.title, .aa {
+    left: 79px;
+    overflow: hidden;
+    position: absolute;
+    width: 119px;
+}
+
+.title {
+    font-size: 13px;
+    height: 19px;
+    top: 10px;
+}
+
+.aa {
+    font-size: 9px;
+    top: 31px;
+}
+
+#side-buttons {
+    border-top: 2px solid #FFFFFF;
+    bottom: 0;
+    height: 32px;
+    padding: 15px;
+    position: absolute;
+    width: 220px;
+}
+
+#settings {
+    background: url("../images/settings.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+	float: left;
+    height: 32px;
+    width: 32px;
+}
+
+#settings:hover {
+    background-position: -32px center;
+}
+
+#download {
+    background: url("../images/download.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 32px;
+    margin-left: 15px;
+    width: 32px;
+}
+
+#download:hover {
+    background-position: -32px center;
+}
+
+#info {
+    background: url("../images/info.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 32px;
+    margin-left: 15px;
+    width: 32px;
+	cursor: pointer;
+}
+
+#info:hover {
+    background-position: -32px center;
+}
+
+#wrong {
+    background: url("../images/wrong.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+	float: left;
+    height: 32px;
+    margin-left: 15px;
+    width: 32px;
+}
+
+#wrong:hover {
+    background-position: -32px center;
+}
+
+#server {
+    background: url("../images/server.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+	float: left;
+    height: 32px;
+    margin-left: 15px;
+    width: 32px;
+}
+
+#server:hover {
+    background-position: -32px center;
+}
+
+#lock {
+    background: url("../images/lock.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+	float: left;
+    height: 32px;
+    margin-left: 15px;
+    width: 32px;
+}
+
+#lock:hover {
+    background-position: -32px center;
+}
+/*Sidebar END*/
+
+header {
+    background-color: #215CAC;
+    float: right;
+    height: 90px;
+    width: 690px;
+}
+
+#logo {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 66px;
+}
+
+#headertext {
+    color: #FFFFFF;
+    font-size: 30px;
+    height: 68px;
+    margin-left: 15%;
+    margin-top: -7%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 582px;
+}
+
+#headertext span {
+	display: none;
+	text-overflow: ellipsis;
+}
+
+#content-wrap {
+    float: right;
+    margin-top: 20px;
+    width: 690px;
+	height: 440px;
+}
+
+#content {
+    background-color: #999999;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+#tracklist {
+	display: none;
+}
+
+article {
+    font-size: 12pt;
+    padding: 0 20px;
+}
+
+#player-wrap {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    float: right;
+    height: 90px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: 688px;
+}
+
+.title-player, .artist-album {
+    float: left;
+    margin-left: 111px;
+    width: 170px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title-player {
+    font-size: 15px;
+    margin-top: 10px;
+    height: 25px;
+}
+
+.artist-album {
+    clear: both;
+    font-size: 12px;
+    height: 17px;
+}
+
+.cover {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    border-right: 1px solid #000;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.cover > img {
+    height: 90px;
+    width: 90px;
+}
+
+/*Audio-Player BEGIN*/
+.audio-player {
+    margin-left: 91px;
+    position: relative;
+}
+/*Audio-Player END*/
+
+footer {
+    background-color: #215CAC;
+    clear: both;
+    color: #FFFFFF;
+    height: 50px;
+    margin: 0 auto;
+    width: 960px;
+}
+
+#copyright {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 15px;
+    text-align: center;
+}
+
+#qtip-growl-container{
+    position: fixed;
+    top: 10px; right: 10px;
+}
+
+#qtip-growl-container .qtip{
+        position: static;
+        min-height: 0;
+        overflow: hidden;
+        margin: 0 0 5px 0;
+    }
+
+/*.jgrowl {
+    position: fixed !important;
+    z-index: 14800 !important;
+}*/
+
+/*Algemeen begin*/
+p {
+    font-size: 12pt;
+    margin-top: 16px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*Algemeen end*/

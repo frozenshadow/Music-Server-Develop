@@ -1,0 +1,374 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Main page BEGIN*/
+html, body {
+	background-color: #FFFFFF;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-color: #fff !important;
+}
+/*Main page END*/
+
+/*HEADER SECTION BEGIN*/
+#header {
+    background: none repeat scroll 0 0 #215CAC;
+    border-bottom: 1px solid #BDBDBD;
+    border-top: 0 none;
+    height: 44px;
+}
+
+#logo {
+    background-image: url("../images/logo.svg");
+    background-repeat: no-repeat;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+    width: 33px;
+}
+
+#page-title {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+#album-list {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/buttons.svg");
+    background-repeat: no-repeat;
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: 0 0 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#start #album-list {
+    height: 25px;
+    width: 25px;
+}
+
+#currently-playing #album-list {
+	background-position: -25px 0;
+    height: 25px;
+    width: 25px;
+}
+/*HEADER SECTION END*/
+
+/*CONTENT SECTION BEGIN*/
+.ui-content {
+	padding: 0 !important;
+}
+
+.mejs-list {
+    margin: 0 !important;
+    text-shadow: none;
+}
+
+.mejs-list li {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-color: -moz-use-text-color -moz-use-text-color #C7C7CC !important;
+    border-image: none !important;
+    border-radius: 0 !important;
+    border-style: none none solid !important;
+    border-width: 0 0 1px !important;
+    max-height: 50px;
+    min-height: 50px !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    text-shadow: none !important;
+}
+
+.current {
+	background-color: #215CAC !important;
+}
+
+.current .title, .current .aa{
+	color: #fff;
+}
+
+.mejs-list li img {
+    height: 50px;
+    left: 0;
+    position: absolute;
+}
+
+.title, .aa {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-weight: normal;
+    max-width: 70%;
+    padding-left: 60px;
+    text-align: left;
+	color: #000;
+}
+
+.title {
+    font-size: 16.5px;
+    padding-top: 5px;
+}
+
+.aa {
+    font-size: 13px;
+}
+/*CONTENT SECTION END*/
+
+/*MEDIAELEMENT.JS SECTION BEGIN*/
+/*.mejs-container {
+    width: 100% !important;
+}
+
+.mejs-container .mejs-controls {
+    width: 90% !important;
+}
+
+.mejs-controls div.mejs-time-rail {
+    width: 77% !important;
+}
+
+*/
+.mejs-time-float {
+    visibility: hidden;
+}
+
+.mejs-container .mejs-controls .mejs-time span {
+	font-size: 15px !important;
+}
+/*MEDIAELEMENT.JS SECTION END*/
+
+#headertext {
+    color: #FFFFFF;
+    font-size: 30px;
+    height: 68px;
+    margin-left: 15%;
+    margin-top: -7%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 582px;
+}
+
+#headertext span {
+	display: none;
+	text-overflow: ellipsis;
+}
+
+#content-wrap {
+    float: right;
+    margin-top: 20px;
+    width: 690px;
+	height: 440px;
+}
+
+#content {
+    background-color: #999999;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+#tracklist {
+	display: none;
+}
+
+article {
+    font-size: 12pt;
+    padding: 0 20px;
+}
+
+#player-wrap {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    float: right;
+    height: 90px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: 688px;
+}
+
+.title-player, .artist-album {
+    float: left;
+    margin-left: 111px;
+    width: 170px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title-player {
+    font-size: 15px;
+    margin-top: 10px;
+    height: 25px;
+}
+
+.artist-album {
+    clear: both;
+    font-size: 12px;
+    height: 17px;
+}
+
+.cover {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    border-right: 1px solid #000;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.cover > img {
+    height: 90px;
+    width: 90px;
+}
+
+/*Audio-Player BEGIN*/
+.audio-player {
+    margin-left: 91px;
+    position: relative;
+}
+/*Audio-Player END*/
+
+/*FOOTER BEGIN*/
+#footer {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 1px solid #BDBDBD;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+
+.controls {
+    margin: 0 auto;
+    padding: 0;
+    width: 151px;
+}
+
+#prev, #play, #pause, #next, #shuffle {
+    background-image: url("../images/controls.svg");
+    cursor: pointer;
+    float: left;
+}
+
+#prev, #next {
+    height: 33px;
+    margin-top: 16px;
+    width: 33px;
+}
+
+#prev {
+     background-position: 0px -90px;
+}
+
+#prev:hover {
+     background-position: -33px -90px;
+}
+
+#play, #pause {
+    float: left;
+    height: 45px;
+    margin: 10px 20px;
+    width: 45px;
+}
+
+#play:hover {
+     background-position: 45px 0px;
+}
+
+#pause {
+     background-position: 0px -45px;
+     display: none;
+}
+
+#pause:hover {
+     background-position: 45px -45px;
+}
+
+#next {
+     background-position: 0px -123px;
+}
+
+#next:hover {
+     background-position: -33px -123px;
+}
+
+#shuffle {
+    right: 134px;
+    top: 18px;
+}
+
+#shuffle:hover {
+	background-position: 41px 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block !important;
+}
+/*FOOTER END*/
+
+#copyright {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 15px;
+    text-align: center;
+}
+
+#qtip-growl-container{
+    position: fixed;
+    top: 10px; right: 10px;
+}
+
+#qtip-growl-container .qtip{
+        position: static;
+        min-height: 0;
+        overflow: hidden;
+        margin: 0 0 5px 0;
+    }
+
+/*.jgrowl {
+    position: fixed !important;
+    z-index: 14800 !important;
+}*/
+
+/*JQUERY MOBILE BEGIN*/
+.ui-listview > .ui-li-has-thumb > .ui-btn, .ui-listview > .ui-li-static.ui-li-has-thumb {
+	padding-left: 0 !important;
+}
+/*JQUERY MOBILE END*/
+
+/*Algemeen begin*/
+p {
+    font-size: 12pt;
+    margin-top: 16px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ul {
+    list-style: none outside none;
+}
+/*Algemeen end*/

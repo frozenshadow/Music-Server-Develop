@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+.controls {
+}
+
+#prev, #play, #pause, #next, #shuffle {
+    cursor: pointer;
+    height: 41px;
+    position: absolute;
+    width: 41px;
+}
+
+#prev {
+    left: 205px;
+    top: 18px;
+    background-image: url(../images/fwdbck.png);
+}
+
+#prev:hover {
+	background-position: 41px 0;
+}
+
+#play {
+    background-image: url("../images/playpause.png");
+    height: 56px;
+    left: 271px;
+    top: 10px;
+    width: 55px;
+}
+
+#play:hover {
+	background-position: 55px 0;
+}
+
+
+#pause {
+    background-image: url("../images/playpause.png");
+    background-position: 0 56px;
+    display: none;
+    height: 56px;
+    left: 271px;
+    top: 10px;
+    width: 55px;
+}
+
+#pause:hover {
+	background-position: 55px 56px;
+}
+
+#next {
+    background-image: url("../images/fwdbck.png");
+    background-position: 0 41px;
+    right: 205px;
+    top: 18px;
+}
+
+
+#next:hover {
+    background-position: 41px 41px;
+}
+
+#shuffle {
+    right: 134px;
+    top: 18px;
+    background-image: url(../images/shuffle.png);
+}
+
+
+#shuffle:hover {
+	background-position: 41px 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block !important;
+}
