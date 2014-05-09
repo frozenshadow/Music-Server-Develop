@@ -6,6 +6,12 @@ html, body {
 	background-color: #cacaca;
 	font-family: Segoe UI, Arial;
 	height: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #wrapper {
@@ -102,6 +108,7 @@ html, body {
     height: 32px;
     margin-left: 15px;
     width: 32px;
+    cursor: pointer;
 }
 
 #download:hover {
@@ -170,7 +177,7 @@ header {
 }
 
 #logo {
-    background-image: url("../images/logo.png");
+    background-image: url("../images/logowhite.svg");
     background-repeat: no-repeat;
     height: 50px;
     margin-left: 20px;
@@ -203,7 +210,7 @@ header {
 }
 
 #content {
-    background-color: #999999;
+    /*background-color: #999999;*/
     background-position: center top;
     background-repeat: no-repeat;
     color: #000000;
@@ -255,13 +262,8 @@ article {
     position: absolute;
     height: 90px;
     width: 90px;
+    pointer-events: none;
     border-right: 1px solid #000;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
 .cover > img {

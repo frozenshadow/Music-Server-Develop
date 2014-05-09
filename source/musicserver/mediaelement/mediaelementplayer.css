@@ -279,7 +279,7 @@
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-handle {
-    background-image: url("../images/handle.png");
+    background-image: url("../images/handle.svg");
     cursor: pointer;
     height: 12px;
     margin: 0;
