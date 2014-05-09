@@ -101,6 +101,7 @@ html, body {
 
 .mejs-list li img {
     height: 50px;
+    width: 50px;
     left: 0;
     position: absolute;
 }

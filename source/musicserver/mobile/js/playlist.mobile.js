@@ -65,7 +65,7 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).prev().addClass('current').siblings().removeClass('current');
-            console.log('if ' + audio_src);
+            console.log('prev');
         }
 
         if ($(current_item).is(':first-child')) { // if it is last - stop playing
@@ -93,7 +93,7 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
-            console.log('if ' + audio_src);
+            console.log('next');
         }
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
@@ -127,7 +127,7 @@ jQuery(document).ready(function () {
             var location = $(this).find('.location').text();
             var albumart = $(this).find('.albumart').text();
 
-            $('.mejs-list').append('<li class="current ui-btn ui-btn-icon-right ui-icon-carat-r" url="' + location + '" artist="' + artist + '"><img src="' + albumart + '/front.jpg"' + 'onerror=' + '"this.src=' + "'images/unknown_album.png'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+            $('.mejs-list').append('<li class="current ui-btn ui-btn-icon-right ui-icon-carat-r" url="' + location + '" artist="' + artist + '"><img src="' + albumart + '" onerror=' + '"this.src=' + "'images/unknown_album.png'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
 
         });
 
@@ -136,6 +136,7 @@ jQuery(document).ready(function () {
     function firstplay() {
         var first_child = '.mejs-list li:first-child';
         var audio_src = $(first_child).attr('url');
+                       console.log('firstplay');
 
         $(first_child).addClass('current').siblings().removeClass('current');
 
@@ -149,6 +150,7 @@ jQuery(document).ready(function () {
 
     function playAudio() {
         $('audio#mejs:first').each(function () {
+                                   console.log('playAudio');
             this.play();
         });
 
@@ -158,6 +160,7 @@ jQuery(document).ready(function () {
 
     function stopAudio() {
         $('audio#mejs:first').each(function () {
+                                   console.log('stopAudio');
             this.pause();
         });
 
@@ -169,10 +172,9 @@ jQuery(document).ready(function () {
         var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
         var audio_src = $(current_item).next().attr('url');
         var type = $(current_item).next().attr('audiotype');
-
+                       console.log('playnext');
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
-            console.log('if ' + audio_src);
         }
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
@@ -180,6 +182,7 @@ jQuery(document).ready(function () {
             if ($('#mejs').attr('src') !== audio_src) {
                 currentPlayer.setSrc(audio_src);
             }
+                       console.log('current item');
             currentPlayer.play();
             metadata();
             csbscroll();
@@ -192,6 +195,7 @@ jQuery(document).ready(function () {
         var cover = song.find('img').attr('src');
         var artist = song.attr('artist');
         var album = song.find('img').attr('alt');
+                       console.log('metadata');
 
         $('.title-player span').text(decodeURIComponent(title));
 
