@@ -34,7 +34,6 @@ jQuery(document).ready(function () {
                 $(this).addClass('current').siblings().removeClass('current');
                 var audio_src = $(this).attr('url');
                 $('audio#mejs:first').each(function () {
-                    stopAudio();
                     if ($('#mejs').attr('src') !== audio_src) {
                         this.setSrc(audio_src);
                     }
@@ -72,11 +71,12 @@ jQuery(document).ready(function () {
         if ($(current_item).is(':first-child')) { // if it is last - stop playing
         } else {
             $('audio#mejs:first').each(function () {
-                stopAudio();
                 if ($('#mejs').attr('src') !== audio_src) {
                     this.setSrc(audio_src);
                 }
-                playAudio();
+                if ($('#pause').attr('class') == 'visible') {
+                    playAudio();
+                }
                 metadata();
                 csbscroll();
             });
@@ -99,11 +99,12 @@ jQuery(document).ready(function () {
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
         } else {
             $('audio#mejs:first').each(function () {
-                stopAudio();
                 if ($('#mejs').attr('src') !== audio_src) {
                     this.setSrc(audio_src);
                 }
-                playAudio();
+                if ($('#pause').attr('class') == 'visible') {
+                    playAudio();
+                }
                 metadata();
                 csbscroll();
             });

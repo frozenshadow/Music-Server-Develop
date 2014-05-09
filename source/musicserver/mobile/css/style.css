@@ -65,6 +65,7 @@ html, body {
 
 /*CONTENT SECTION BEGIN*/
 .ui-content {
+	margin-bottom: 65px;
 	padding: 0 !important;
 }
 
