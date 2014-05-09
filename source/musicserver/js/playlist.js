@@ -149,6 +149,10 @@ jQuery(document).ready(function () {
         csbscroll();
     });
 
+    $("#download").click(function () {
+        window.open($(".mejs-list li.current").attr("url"));
+    });
+
     /////////////////////////////////////////////////////////////////////	FUNCTIES
 
     function dataoffile() {
