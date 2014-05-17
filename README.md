@@ -11,7 +11,7 @@ Music Server To-do
 - [x] Clean up code
 - [x] More flexibility in selecting album art
 
-  Bugs:
+  **Bugs:**
 
 - [ ] Headertext overlap after clicking next
 - [ ] Cannot easily return to previous song after error
