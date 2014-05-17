@@ -10,6 +10,7 @@ Music Server To-do
 - [x] Bring back download button
 - [x] Clean up code
 - [x] More flexibility in selecting album art
+- [ ] Add option to select a lay-out
 
   **Bugs:**
 
