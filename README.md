@@ -1,22 +1,18 @@
 Music Server To-do
 ==================
 
-- functieknoppen activeren;
-- iOS functions and design;
-- Selecteerbare playlist;
-- Zoek functie;
-- Lage/hoge bandbreedte functie;
-- Need more commenting
+- [ ] Activate remaining buttons
+- [ ] Finish mobile design
+- [ ] Add function for selectable playlists
+- [ ] Add music search function
+- [ ] Low/high bandwidth option
+- [ ] More commenting and documentation
+- [x] Bring back download button
+- [x] Clean up code
+- [x] More flexibility in selecting album art
 
   Bugs:
 
-- Headertext overlap after clicking next;
-- Kan bij song error niet terug, hij blijft naar de volgende gaan
-
-Music Server changelog next release
-===================================
-
-- Brought back the download button;
-- Cleaned up code;
-- Small album art bug fixed;
-- More flexibility in selecting album art
+- [ ] Headertext overlap after clicking next
+- [ ] Cannot easily return to previous song after error
+- [x] Small album art issue
