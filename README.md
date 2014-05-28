@@ -11,6 +11,7 @@ Music Server To-do
 - [x] Clean up code
 - [x] More flexibility in selecting album art
 - [ ] Add option to select a lay-out
+- [ ] Add volume slider
 
   **Bugs:**
 
