@@ -22,10 +22,13 @@ jQuery(document).ready(function () {
             audioWidth: 560,
             audioHeight: 20
         });
-        var keyup = true;
+
+        //keyboard shortcuts
+        var keyup = true; //prevents spamming play/pause
         $(document).keydown(function (e) {
             switch (e.which) {
 
+                //play or pause current item
                 case 32:
                     if (!keyup) return;
                     keyup = false;
@@ -41,10 +44,12 @@ jQuery(document).ready(function () {
                     });
                     break;
 
+                    //play previous item
                 case 37:
                     $('#prev').click();
                     break;
 
+                    //play next item
                 case 39:
                     $('#next').click();
                     break;
@@ -56,6 +61,7 @@ jQuery(document).ready(function () {
         });
     });
 
+    //get data from playlist
     $.ajax('musicserver/playlists/playlist.txt', {
         dataType: 'text',
         success: function (data) {
@@ -67,7 +73,7 @@ jQuery(document).ready(function () {
                 $(this).addClass('current').siblings().removeClass('current');
                 var audio_src = $(this).attr('url');
                 $('audio#mejs:first').each(function () {
-                    if ($('#mejs').attr('src') !== audio_src) {
+                    if ($('#mejs').attr('src') != audio_src) {
                         this.setSrc(audio_src);
                     }
                     playAudio();
@@ -77,6 +83,7 @@ jQuery(document).ready(function () {
         }
     });
 
+    //buttons
     $('#play').click(function () {
 
         if ($(this).find('.visible')) {
@@ -104,17 +111,16 @@ jQuery(document).ready(function () {
         if ($(current_item).is(':first-child')) { // if it is last - stop playing
         } else {
             $('audio#mejs:first').each(function () {
-                if ($('#mejs').attr('src') !== audio_src) {
+                if ($('#mejs').attr('src') != audio_src) {
                     this.setSrc(audio_src);
                 }
-                playAudio();
+                if ($('#pause').attr('class') == 'visible') {
+                    playAudio();
+                } //keep play state.
                 metadata();
                 csbscroll();
             });
         }
-
-
-
     });
 
     $('#next').click(function () {
@@ -128,13 +134,15 @@ jQuery(document).ready(function () {
         }
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
-			stopAudio();
+            stopAudio();
         } else {
             $('audio#mejs:first').each(function () {
-                if ($('#mejs').attr('src') !== audio_src) {
+                if ($('#mejs').attr('src') != audio_src) {
                     this.setSrc(audio_src);
                 }
-                playAudio();
+                if ($('#pause').attr('class') == 'visible') {
+                    playAudio();
+                } //keep play state.
                 metadata();
                 csbscroll();
             });
@@ -146,20 +154,20 @@ jQuery(document).ready(function () {
         $('.mejs-list li.current').insertBefore('.mejs-list li:first');
         csbscroll();
     });
-	
-	$("#download").click(function () {
-		window.open($(".mejs-list li.current").attr("url"));
-	});
-	
-	$.ajax('musicserver/settings.txt', {
+
+    $("#download").click(function () {
+        window.open($(".mejs-list li.current").attr("url"));
+    }); //make sure the MIME type for the file is set to "application/octet-stream"
+
+    //data
+    $.ajax('musicserver/settings.txt', {
         dataType: 'text',
         success: function (data) {
             $('#content').html(data);
         }
     });
 
-    /////////////////////////////////////////////////////////////////////	FUNCTIES
-
+    //functions
     function dataoffile() {
         $(".track").each(function () {
             var title = $(this).find('.title').text();
@@ -181,7 +189,7 @@ jQuery(document).ready(function () {
         $(first_child).addClass('current').siblings().removeClass('current');
 
         $('audio#mejs:first').each(function () {
-            if ($('#mejs').attr('src') !== audio_src) {
+            if ($('#mejs').attr('src') != audio_src) {
                 this.setSrc(audio_src);
             }
             metadata();
@@ -218,7 +226,7 @@ jQuery(document).ready(function () {
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
         } else {
-            if ($('#mejs').attr('src') !== audio_src) {
+            if ($('#mejs').attr('src') != audio_src) {
                 currentPlayer.setSrc(audio_src);
             }
             currentPlayer.play();
@@ -227,29 +235,31 @@ jQuery(document).ready(function () {
         }
     }
 
+    // Metadata sets the player information.
     function metadata() {
         var song = $('.mejs-list li.current');
         var title = song.find('.title').text();
         var artist = song.attr('artist');
         var album = song.find('img').attr('alt');
-		var cover = song.find('img').attr('src');
-		var cover2 = $(".cover img").attr('src');
-		cover = cover + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.png'" + '"';
-		cover2 = cover2 + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.png'" + '"';
+        var cover = song.find('img').attr('src');
+        var cover2 = $(".cover img").attr('src');
+        cover = cover + '" onerror="this.src=\'musicserver/server/images/unknown_album.png\'"';
+        cover2 = cover2 + '" onerror="this.src=\'musicserver/server/images/unknown_album.png\'"';
 
         $('.title-player span').text(decodeURIComponent(title));
-
         $('.artist-album span').text(decodeURIComponent(artist) + ' - ' + decodeURIComponent(album));
 
-
-
-        $('#headertext span:last').remove();
-        $('#headertext').append('<span>Now playing: ' + title + '</span>');
-        
         if (cover2 != cover) {
             $('.cover').html('<img src="' + cover + '/>');
         }
-        
+
+        if ($("#artist img").attr('src') != 'music/' + artist + '/artist.jpg') {
+            $('#artist').html('<img src="music/' + artist + '/artist.jpg"/>');
+        } //sets artist cover if #artist is in the html
+
+        $('#headertext span:last').remove();
+        $('#headertext').append('<span>Now playing: ' + title + '</span>');
+
         (function () {
             var quotes = $("#headertext span");
             var quoteIndex = -1;
@@ -366,7 +376,7 @@ jQuery(document).ready(function () {
                             var lifespan = 5000;
 
                             clearTimeout(api.timer);
-                            if (e.type !== 'mouseover') {
+                            if (e.type != 'mouseover') {
                                 api.timer = setTimeout(function () {
                                     api.hide(e);
                                 }, lifespan);
@@ -379,8 +389,8 @@ jQuery(document).ready(function () {
             }
         });
     };
-	
-	/*function loadconfig() {
+
+    /*function loadconfig() {
 		$("#playlist").change(function() {
 			$("#second-choice").load("textdata/" + $(this).val() + ".txt");
 		});
