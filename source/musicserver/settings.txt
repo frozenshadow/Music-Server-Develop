@@ -1,0 +1,23 @@
+<table>
+	<tbody>
+		<tr>
+			<td style="padding-right: 15px;"><span>Playlist:</span></td>
+			<td style="padding: 3px;"><select>
+				<option selected value="demo">
+					Demo
+				</option>
+				<option value="favorieten">
+					Favorieten
+				</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td style="padding: 3px;"><span>Email:</span></td>
+			<td style="padding: 3px;"><input id="contact-input" name="email" required type="email"></td>
+		</tr>
+		<tr>
+			<td style="padding: 3px;"></td>
+			<td style="padding: 3px;"><input id="contact-submit" name="submit" type="submit" value="Save"></td>
+		</tr>
+	</tbody>
+</table>
