@@ -234,20 +234,22 @@ jQuery(document).ready(function () {
         var album = song.find('img').attr('alt');
 		var cover = song.find('img').attr('src');
 		var cover2 = $(".cover img").attr('src');
-		cover = cover + '" onerror=' + '"this.src=' + "'musicserver/images/unknown_album.png'" + '"';
-		cover2 = cover2 + '" onerror=' + '"this.src=' + "'musicserver/images/unknown_album.png'" + '"';
+		cover = cover + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.png'" + '"';
+		cover2 = cover2 + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.png'" + '"';
 
         $('.title-player span').text(decodeURIComponent(title));
 
         $('.artist-album span').text(decodeURIComponent(artist) + ' - ' + decodeURIComponent(album));
 
-        if (cover2 != cover) {
-            $('.cover').html('<img src="' + cover + '/>');
-        }
+
 
         $('#headertext span:last').remove();
         $('#headertext').append('<span>Now playing: ' + title + '</span>');
-
+        
+        if (cover2 != cover) {
+            $('.cover').html('<img src="' + cover + '/>');
+        }
+        
         (function () {
             var quotes = $("#headertext span");
             var quoteIndex = -1;
