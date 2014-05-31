@@ -28,8 +28,13 @@ jQuery(document).ready(function () {
         $(document).keydown(function (e) {
             switch (e.which) {
 
-                //play or pause current item
+                case 27:
+                    //escape: stop audio
+                    stopAudio();
+                    break;
+
                 case 32:
+                    //spacebar: start/stop audio
                     if (!keyup) return;
                     keyup = false;
                     if ($('#pause').attr('class') == 'visible') {
@@ -44,13 +49,13 @@ jQuery(document).ready(function () {
                     });
                     break;
 
-                    //play previous item
                 case 37:
+                    //left arrow: play previous item
                     $('#prev').click();
                     break;
 
-                    //play next item
                 case 39:
+                    //right arrow: play next item
                     $('#next').click();
                     break;
 
