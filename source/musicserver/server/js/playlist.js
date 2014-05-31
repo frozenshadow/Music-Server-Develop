@@ -181,7 +181,7 @@ jQuery(document).ready(function () {
             var location = $(this).find('.location').text();
             var albumart = $(this).find('.albumart').text();
 
-            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '"><img src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.png'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '"><img src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
 
         });
 
@@ -248,8 +248,8 @@ jQuery(document).ready(function () {
         var album = song.find('img').attr('alt');
         var cover = song.find('img').attr('src');
         var cover2 = $(".cover img").attr('src');
-        cover = cover + '" onerror="this.src=\'musicserver/server/images/unknown_album.png\'"';
-        cover2 = cover2 + '" onerror="this.src=\'musicserver/server/images/unknown_album.png\'"';
+        cover = cover + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
+        cover2 = cover2 + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
 
         $('.title-player span').text(decodeURIComponent(title));
         $('.artist-album span').text(decodeURIComponent(artist) + ' - ' + decodeURIComponent(album));
