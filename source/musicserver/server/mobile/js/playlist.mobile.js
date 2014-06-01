@@ -34,7 +34,6 @@ jQuery(document).ready(function () {
                 $(this).addClass('current').siblings().removeClass('current');
                 var audio_src = $(this).attr('url');
                 $('audio#mejs:first').each(function () {
-                    stopAudio();
                     if ($('#mejs').attr('src') !== audio_src) {
                         this.setSrc(audio_src);
                     }
@@ -66,19 +65,20 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).prev().addClass('current').siblings().removeClass('current');
-            console.log('if ' + audio_src);
+            //console.log('if ' + audio_src);
         }
 
         if ($(current_item).is(':first-child')) { // if it is last - stop playing
         } else {
             $('audio#mejs:first').each(function () {
-                stopAudio();
                 if ($('#mejs').attr('src') !== audio_src) {
                     this.setSrc(audio_src);
                 }
-                playAudio();
+		if ($('#pause').attr('class') == 'visible') {
+                    playAudio();
+                } //keep play state.
                 metadata();
-                csbscroll();
+                //csbscroll(); //not working
             });
         }
 
@@ -93,19 +93,20 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
-            console.log('if ' + audio_src);
+            //console.log('if ' + audio_src);
         }
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
         } else {
             $('audio#mejs:first').each(function () {
-                stopAudio();
                 if ($('#mejs').attr('src') !== audio_src) {
                     this.setSrc(audio_src);
                 }
-                playAudio();
+		if ($('#pause').attr('class') == 'visible') {
+                    playAudio();
+                } //keep play state.
                 metadata();
-                csbscroll();
+                //csbscroll(); //not working
             });
         }
     });
@@ -113,11 +114,10 @@ jQuery(document).ready(function () {
     $('#shuffle').click(function (e) {
         $('.mejs-list').shuffle();
         $('.mejs-list li.current').insertBefore('.mejs-list li:first');
-        csbscroll();
+        //csbscroll(); //not working
     });
 
-    /////////////////////////////////////////////////////////////////////	FUNCTIES
-
+    //functions
     function dataoffile() {
         $(".track").each(function () {
             var title = $(this).find('.title').text();
@@ -126,7 +126,7 @@ jQuery(document).ready(function () {
             var location = $(this).find('.location').text();
             var albumart = $(this).find('.albumart').text();
 
-            $('.mejs-list').append('<li class="current ui-btn ui-btn-icon-right ui-icon-carat-r" url="' + location + '" artist="' + artist + '"><img src="' + albumart + '/front.jpg"' + 'onerror=' + '"this.src=' + "'images/unknown_album.png'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+            $('.mejs-list').append('<li class="current ui-btn ui-btn-icon-right ui-icon-carat-r" url="' + location + '" artist="' + artist + '"><img src="' + albumart + '" onerror=' + '"this.src=' + "'images/unknown_album.png'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
 
         });
 
@@ -171,7 +171,7 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
-            console.log('if ' + audio_src);
+            //console.log('if ' + audio_src);
         }
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
@@ -181,14 +181,14 @@ jQuery(document).ready(function () {
             }
             currentPlayer.play();
             metadata();
-            csbscroll();
+            //csbscroll(); //not working
         }
     }
 
     function metadata() {
         var song = $('.mejs-list li.current');
         var title = song.find('.title').text();
-        var cover = song.find('img').attr('src');
+        //var cover = song.find('img').attr('src');
         var artist = song.attr('artist');
         var album = song.find('img').attr('alt');
 
@@ -196,9 +196,9 @@ jQuery(document).ready(function () {
 
         $('.artist-album span').text(decodeURIComponent(artist) + ' - ' + decodeURIComponent(album));
 
-        if ($(".cover img").attr('src') != cover) {
-            $('.cover').html('<img src="' + cover + '"/>');
-        }
+        //if ($(".cover img").attr('src') != cover) {
+        //    $('.cover').html('<img src="' + cover + '"/>');
+        //}
 
         $('#headertext span:last').remove();
         $('#headertext').append('<span>Now playing: ' + title + '</span>');
@@ -220,9 +220,10 @@ jQuery(document).ready(function () {
 
     }
 
-    function csbscroll() {
-        $('#side-tracks').mCustomScrollbar("scrollTo", ".current");
-    }
+    //disabled: not working
+    //function csbscroll() {
+    //    $('#side-tracks').mCustomScrollbar("scrollTo", ".current");
+    //}
 
     // How to use MusicStreamer popup
     function dialogue(content, title) {
