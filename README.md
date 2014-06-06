@@ -12,7 +12,6 @@ Music Server To-do
 - [x] More flexibility in selecting album art
 - [ ] Add option to select a lay-out
 - [x] Add volume slider
-- [ ] Fix volume slider
 
 
   **Bugs:**
@@ -20,4 +19,5 @@ Music Server To-do
 - [ ] Headertext overlap after clicking next
 - [ ] Cannot easily return to previous song after error
 - [x] Small album art issue
+- [ ] Fix volume slider
 - [ ] Internet exploder (not working)
