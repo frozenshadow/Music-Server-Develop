@@ -124,6 +124,10 @@ html, body {
     margin-left: 15px;
 }
 
+.mCSB_inside > .mCSB_container {
+    margin-right: 16px !important;
+}
+
 /*Sidebar END*/
 
 header {
