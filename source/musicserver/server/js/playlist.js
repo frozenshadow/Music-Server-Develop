@@ -163,17 +163,26 @@ jQuery(document).ready(function () {
     $("#download").click(function () {
         window.open($(".mejs-list li.current").attr("url"));
     }); //make sure the MIME type for the file is set to "application/octet-stream"
+	
+	$("#lock").click(function () {
+		if ($(".mejs-list").hasClass("ui-sortable-disabled")) {
+			$(".mejs-list").sortable("enable");
+		} else {
+			$(".mejs-list").sortable("disable");
+		}
+		$(this).toggleClass("locked");
+	});
+	
+	// load settings (experimental)
+	$.ajax('musicserver/settings.txt', {
+		dataType: 'text',
+		success: function (data) {
+			$('#content').html(data);
+		}
+	});
+	
+	/////////////////////////////////////////////////////////////////////	FUNCTIONS
 
-    //data
-    $.ajax('musicserver/settings.txt', {
-        dataType: 'text',
-        success: function (data) {
-            $('#content').html(data);
-        }
-    });
-/////////////////////////////////////////////////////////////////////////////////////////
-////////functions////////////////////////////////stop moaning Tom////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
     function dataoffile() {
         $(".track").each(function () {
             var title = $(this).find('.title').text();
@@ -284,7 +293,7 @@ jQuery(document).ready(function () {
     }
 
     function csbscroll() {
-        $('#side-tracks').mCustomScrollbar("scrollTo", ".current");
+        $("#side-tracks").mCustomScrollbar("scrollTo", ".current");
     }
 
     // How to use Music Server popup
@@ -324,8 +333,7 @@ jQuery(document).ready(function () {
 
     window.Alert = function () {
         var message = $('<span />', {
-            html: 'Double click on a track to play<br>Press SPACE to pause/play<br>Press left/right key to play the previous/next song<br><br><b>Tip!:</b> you can customize your playlist by dragging the desired song to the desired location in your playlist.<br><br>'
-            //text: 'Double click on a track to play'
+            html: 'Double click on a track to play<br>Press SPACE to play/pause<br>Press ESCAPE to stop playing<br>Press left/right key to play the previous/next song<br><br><b>Tip!:</b> you can customize your playlist by dragging the desired song to the desired location in your playlist.<br><br>'
         }),
             ok = $('<button />', {
                 text: 'Thank you!',
@@ -395,11 +403,5 @@ jQuery(document).ready(function () {
             }
         });
     };
-
-    /*function loadconfig() {
-		$("#playlist").change(function() {
-			$("#second-choice").load("textdata/" + $(this).val() + ".txt");
-		});
-	}*/
 
 });

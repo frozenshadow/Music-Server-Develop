@@ -15,7 +15,6 @@ html, body {
 /*Main page END*/
 
 /*Sidebar BEGIN*/
-
 #sidebar {
     background-color: #323232;
     float: left;
@@ -26,7 +25,7 @@ html, body {
 }
 
 #side-tracks {
-	margin-top: 20px;
+	margin-top: 10px;
 	height: 578px;
 	overflow: auto;
 }
@@ -35,7 +34,7 @@ html, body {
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
     height: 63px;
-    margin: 0 20px 20px 20px;
+    margin: 10px 20px 20px;
     position: relative;
     width: 208px;
 }
@@ -92,7 +91,7 @@ html, body {
 }
 
 #settings:hover, #download:hover, #info:hover, #wrong:hover, #server:hover, #lock:hover {
-	background-position: -32px center;
+	background-position: -32px 0;
 }
 
 #settings {
@@ -124,10 +123,17 @@ html, body {
     margin-left: 15px;
 }
 
+.locked {
+    background-position: 0 -32px !important;
+}
+
+.locked:hover {
+    background-position: -32px -32px !important;
+}
+
 .mCSB_inside > .mCSB_container {
     margin-right: 16px !important;
 }
-
 /*Sidebar END*/
 
 header {
@@ -143,19 +149,18 @@ header {
     height: 50px;
     margin-left: 20px;
     margin-top: 20px;
-    width: 66px;
 }
 
 #headertext {
     color: #FFFFFF;
     font-size: 30px;
     height: 68px;
-    margin-left: 15%;
+    margin-left: 17%;
     margin-top: -7%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 582px;
+    width: 573px;
 }
 
 #headertext span {

@@ -2,7 +2,7 @@ Music Server To-do
 ==================
 
 - [ ] Activate remaining buttons
-- [ ] Finish mobile design
+- [ ] Finish mobile version
 - [ ] Add function for selectable playlists
 - [ ] Add music search function
 - [ ] Low/high bandwidth option
@@ -12,6 +12,7 @@ Music Server To-do
 - [x] More flexibility in selecting album art
 - [ ] Add option to select a lay-out
 - [x] Add volume slider
+- [ ] Make Internet Explorer compatible
 
 
   **Bugs:**
@@ -19,5 +20,3 @@ Music Server To-do
 - [ ] Headertext overlap after clicking next
 - [ ] Cannot easily return to previous song after error
 - [x] Small album art issue
-- [ ] Fix volume slider
-- [ ] Internet exploder (not working)
