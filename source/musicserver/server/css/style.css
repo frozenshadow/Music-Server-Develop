@@ -26,7 +26,7 @@ html, body {
 }
 
 #side-tracks {
-	margin-top: 10px;
+	margin-top: 20px;
 	height: 578px;
 	overflow: auto;
 }
@@ -35,7 +35,7 @@ html, body {
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
     height: 63px;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     position: relative;
     width: 208px;
 }
