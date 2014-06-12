@@ -1,7 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
-.controls {
+.mejs-controls .mejs-volume-button {
+position: absolute;
+right: 0;
 }
 
 #prev, #play, #pause, #next, #shuffle {
@@ -85,7 +87,7 @@
     background: url("../images/controls.svg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 41px;
     margin: 0;
-    right: 44px;
+    right: 34px;
     top: -52px;
     width: 41px;
 }
@@ -114,7 +116,7 @@
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     cursor: pointer;
     height: 70px;
-    left: 15px;
+    left: 30px !important;
     top: -60px;
     width: 10px;
 }

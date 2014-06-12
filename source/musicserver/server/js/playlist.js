@@ -19,7 +19,7 @@ jQuery(document).ready(function () {
             },
             keyActions: [],
             features: ['current', 'progress', 'duration', 'tracks', 'volume'],
-            audioWidth: 560,
+            audioWidth: 550,
             audioHeight: 20
         });
 
@@ -167,8 +167,10 @@ jQuery(document).ready(function () {
 	$("#lock").click(function () {
 		if ($(".mejs-list").hasClass("ui-sortable-disabled")) {
 			$(".mejs-list").sortable("enable");
+                        $('#lock').attr('title', 'Lock the playlist');
 		} else {
 			$(".mejs-list").sortable("disable");
+                        $('#lock').attr('title', 'Unlock the playlist');
 		}
 		$(this).toggleClass("locked");
 	});
@@ -271,6 +273,8 @@ jQuery(document).ready(function () {
         if ($("#artist img").attr('src') != 'music/' + artist + '/artist.jpg') {
             $('#artist').html('<img src="music/' + artist + '/artist.jpg"/>');
         } //sets artist cover if #artist is in the html
+
+        $('#download').attr('title', 'Download "' + title + '"');
 
         $('#headertext span:last').remove();
         $('#headertext').append('<span>Now playing: ' + title + '</span>');

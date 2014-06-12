@@ -82,11 +82,11 @@ if (screen.width <= 960) {
 			<div class="cover"></div>
             <div class="audio-player">
                 <div class="controls">
-                    <div id="prev"></div>
-                    <div id="play"></div>
-					<div id="pause"></div>
-                    <div id="next"></div>
-                    <div id="shuffle"></div>
+                    <div id="prev" title="Previous song"></div>
+                    <div id="play" title="Play audio"></div>
+					<div id="pause" title="Pause audio"></div>
+                    <div id="next" title="Next song"></div>
+                    <div id="shuffle" title="Shuffle songs"></div>
                 </div>
                 <audio id="mejs" src="dummy" type="audio/wav" onerror="$('#next').click();createGrowl();" controls></audio>
             </div>
