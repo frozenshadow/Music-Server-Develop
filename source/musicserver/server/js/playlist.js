@@ -19,7 +19,7 @@ jQuery(document).ready(function () {
             },
             keyActions: [],
             features: ['current', 'progress', 'duration', 'tracks', 'volume'],
-            audioWidth: 550,
+            audioWidth: 534,
             audioHeight: 20
         });
 

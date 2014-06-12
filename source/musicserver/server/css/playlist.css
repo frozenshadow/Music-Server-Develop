@@ -92,11 +92,16 @@ right: 0;
 	z-index: 1;
 }
 
+.mejs-container .mejs-controls div {
+	width: 10px;
+	right: -25px;
+}
+
 .mejs-controls .mejs-button button {
     background: url("../images/controls.svg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 41px;
     margin: 0;
-    right: 34px;
+    right: 43px;
     top: -52px;
     width: 41px;
 }
@@ -125,7 +130,6 @@ right: 0;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     cursor: pointer;
     height: 70px;
-    left: 30px !important;
     top: -60px;
     width: 10px;
 }
