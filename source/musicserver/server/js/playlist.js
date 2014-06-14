@@ -76,7 +76,12 @@ jQuery(document).ready(function () {
 
             $('.mejs-list li').dblclick(function () {
                 $(this).addClass('current').siblings().removeClass('current');
-                var audio_src = $(this).attr('url');
+                var audio = $(this).attr('url');
+                if ($("#quality").attr('class') == "high") {
+                    audio_src = audio + $(this).attr('highq');
+                } else {
+                    audio_src = audio + $(this).attr('lowq');
+                }
                 $('audio#mejs:first').each(function () {
                     if ($('#mejs').attr('src') != audio_src) {
                         this.setSrc(audio_src);
@@ -105,8 +110,13 @@ jQuery(document).ready(function () {
 
     $('#prev').click(function () {
         var current_item = $('.mejs-list li.current:last'); // :last is added if we have few .current classes
-        var audio_src = $(current_item).prev().attr('url');
+        var audio = $(current_item).prev().attr('url');
         var type = $(current_item).prev().attr('audiotype');
+        if ($("#quality").attr('class') == "high") {
+            audio_src = audio + $(current_item).prev().attr('highq');
+        } else {
+            audio_src = audio + $(current_item).prev().attr('lowq');
+        }
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).prev().addClass('current').siblings().removeClass('current');
@@ -130,8 +140,13 @@ jQuery(document).ready(function () {
 
     $('#next').click(function () {
         var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
-        var audio_src = $(current_item).next().attr('url');
+        var audio = $(current_item).next().attr('url');
         var type = $(current_item).next().attr('audiotype');
+        if ($("#quality").attr('class') == "high") {
+            audio_src = audio + $(current_item).next().attr('highq');
+        } else {
+            audio_src = audio + $(current_item).next().attr('lowq');
+        }
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
@@ -163,27 +178,39 @@ jQuery(document).ready(function () {
     $("#download").click(function () {
         window.open($(".mejs-list li.current").attr("url"));
     }); //make sure the MIME type for the file is set to "application/octet-stream"
-	
-	$("#lock").click(function () {
-		if ($(".mejs-list").hasClass("ui-sortable-disabled")) {
-			$(".mejs-list").sortable("enable");
-                        $('#lock').attr('title', 'Lock the playlist');
-		} else {
-			$(".mejs-list").sortable("disable");
-                        $('#lock').attr('title', 'Unlock the playlist');
-		}
-		$(this).toggleClass("locked");
-	});
-	
-	// load settings (experimental)
-	$.ajax('musicserver/settings.txt', {
-		dataType: 'text',
-		success: function (data) {
-			$('#content').html(data);
-		}
-	});
-	
-	/////////////////////////////////////////////////////////////////////	FUNCTIONS
+
+    $("#lock").click(function () {
+        if ($(".mejs-list").hasClass("ui-sortable-disabled")) {
+            $(".mejs-list").sortable("enable");
+            $('#lock').attr('title', 'Lock the playlist');
+        } else {
+            $(".mejs-list").sortable("disable");
+            $('#lock').attr('title', 'Unlock the playlist');
+        }
+        $(this).toggleClass("locked");
+    });
+
+    $('#quality').click(function () {
+        if ($(this).attr('class') == 'high') {
+            $(this).removeClass('high');
+            $(this).addClass('low');
+            $(this).attr('title', 'Set music quality to high');
+        } else {
+            $(this).removeClass('low');
+            $(this).addClass('high');
+            $(this).attr('title', 'Set music quality to low');
+        }
+    });
+
+    // load settings (experimental)
+    $.ajax('musicserver/settings.txt', {
+        dataType: 'text',
+        success: function (data) {
+            $('#content').html(data);
+        }
+    });
+
+    /////////////////////////////////////////////////////////////////////	FUNCTIONS
 
     function dataoffile() {
         $(".track").each(function () {
@@ -192,8 +219,10 @@ jQuery(document).ready(function () {
             var artist = $(this).find('.creator').text();
             var location = $(this).find('.location').text();
             var albumart = $(this).find('.albumart').text();
+            var lowq = $(this).find('.lowq').text();
+            var highq = $(this).find('.highq').text();
 
-            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '"><img src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '" lowq="' + lowq + '" highq="' + highq + '"><img src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
 
         });
 
@@ -201,7 +230,12 @@ jQuery(document).ready(function () {
 
     function firstplay() {
         var first_child = '.mejs-list li:first-child';
-        var audio_src = $(first_child).attr('url');
+        var audio = $(first_child).attr('url');
+        if ($("#quality").attr('class') == "high") {
+            audio_src = audio + $(first_child).attr('highq');
+        } else {
+            audio_src = audio + $(first_child).attr('lowq');
+        }
 
         $(first_child).addClass('current').siblings().removeClass('current');
 
@@ -233,8 +267,15 @@ jQuery(document).ready(function () {
 
     function mejsPlayNext(currentPlayer) {
         var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
-        var audio_src = $(current_item).next().attr('url');
+        var audio = $(current_item).next().attr('url');
         var type = $(current_item).next().attr('audiotype');
+        var quality = $("#quality").attr('class');
+        if ($("#quality").attr('class') == "high") {
+            audio_src = audio + $(current_item).next().attr('highq');
+        } else {
+            audio_src = audio + $(current_item).next().attr('lowq');
+        }
+
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
