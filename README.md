@@ -2,21 +2,23 @@ Music Server To-do
 ==================
 
 - [ ] Activate remaining buttons
-- [ ] Finish mobile version
 - [ ] Add function for selectable playlists
 - [ ] Add music search function
-- [ ] Low/high bandwidth option
-- [ ] More commenting and documentation
-- [x] Bring back download button
-- [x] Clean up code
-- [x] More flexibility in selecting album art
 - [ ] Add option to select a lay-out
-- [x] Add volume slider
+- [ ] Finish mobile version
 - [ ] Make Internet Explorer compatible
-
+- [ ] More commenting and documentation
 
   **Bugs:**
 
-- [ ] Headertext overlap after clicking next
-- [ ] Cannot easily return to previous song after error
-- [x] Small album art issue
+- [ ] Fix scrollto when clicking on the scrollbar bar
+- [ ] Headertext overlap after clickingnext
+
+  **Done:**
+- [x] bug: Cannot easily return to previous song after error (Fixed 14 July 2014)
+- [x] bug: Small album art issue
+- [x] function: Low/high bandwidth option (Added 14 July 2014)
+- [x] function: Add volume slider (Added 6 July 2014)
+- [x] function: Bring back download button (Added 9 May 2014)
+- [x] function: More flexibility in selecting album art (Added 9 May 2014)
+- [x] miscellaneous: Clean up code
