@@ -105,7 +105,8 @@ if (screen.width <= 960) {
     (function($) {
         $(window).load(function() {
             $("#side-tracks").mCustomScrollbar({
-                scrollInertia: 500
+                scrollInertia: 500,
+				mouseWheelPixels: 200
             });
             $(".mejs-list").sortable({
                 scroll: false,
