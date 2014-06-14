@@ -81,7 +81,8 @@ jQuery(document).ready(function () {
                     audio_src = audio + $(this).attr('highq');
                 } else {
                     audio_src = audio + $(this).attr('lowq');
-                }
+                } //low/high quality setting
+
                 $('audio#mejs:first').each(function () {
                     if ($('#mejs').attr('src') != audio_src) {
                         this.setSrc(audio_src);
@@ -116,7 +117,7 @@ jQuery(document).ready(function () {
             audio_src = audio + $(current_item).prev().attr('highq');
         } else {
             audio_src = audio + $(current_item).prev().attr('lowq');
-        }
+        } //low/high quality setting
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).prev().addClass('current').siblings().removeClass('current');
@@ -146,7 +147,7 @@ jQuery(document).ready(function () {
             audio_src = audio + $(current_item).next().attr('highq');
         } else {
             audio_src = audio + $(current_item).next().attr('lowq');
-        }
+        } //low/high quality setting
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
@@ -199,7 +200,8 @@ jQuery(document).ready(function () {
             $(this).removeClass('low');
             $(this).addClass('high');
             $(this).attr('title', 'Set music quality to low');
-        }
+        } //low/high quality setting
+	    reloadAudio()
     });
 
     // load settings (experimental)
@@ -235,7 +237,7 @@ jQuery(document).ready(function () {
             audio_src = audio + $(first_child).attr('highq');
         } else {
             audio_src = audio + $(first_child).attr('lowq');
-        }
+        } //low/high quality setting
 
         $(first_child).addClass('current').siblings().removeClass('current');
 
@@ -269,12 +271,11 @@ jQuery(document).ready(function () {
         var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
         var audio = $(current_item).next().attr('url');
         var type = $(current_item).next().attr('audiotype');
-        var quality = $("#quality").attr('class');
         if ($("#quality").attr('class') == "high") {
             audio_src = audio + $(current_item).next().attr('highq');
         } else {
             audio_src = audio + $(current_item).next().attr('lowq');
-        }
+        } //low/high quality setting
 
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
@@ -339,6 +340,28 @@ jQuery(document).ready(function () {
 
     function csbscroll() {
         $("#side-tracks").mCustomScrollbar("scrollTo", ".current");
+    }
+
+    function reloadAudio() { //reload audio
+       var current_item = $('.mejs-list li.current');
+        var audio = $(current_item).attr('url');
+
+        if ($("#quality").attr('class') == "high") {
+            audio_src = audio + $(current_item).attr('highq');
+        } else {
+            audio_src = audio + $(current_item).attr('lowq');
+        } //low/high quality setting
+
+        $('audio#mejs:first').each(function () {
+            if ($('#mejs').attr('src') != audio_src) {
+                this.setSrc(audio_src);
+            }
+            if ($('#pause').attr('class') == 'visible') {
+                playAudio();
+            } //keep play state.
+            metadata();
+            csbscroll();
+        });
     }
 
     // How to use Music Server popup
