@@ -177,7 +177,7 @@ jQuery(document).ready(function () {
     });
 
     $("#download").click(function () {
-        window.open($(".mejs-list li.current").attr("url"));
+        window.open($('audio#mejs').attr('src'));
     }); //make sure the MIME type for the file is set to "application/octet-stream"
 
     $("#lock").click(function () {
