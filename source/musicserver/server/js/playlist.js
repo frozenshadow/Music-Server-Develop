@@ -77,6 +77,8 @@ jQuery(document).ready(function () {
             $('.mejs-list li').dblclick(function () {
                 $(this).addClass('current').siblings().removeClass('current');
                 var audio = $(this).attr('url');
+
+                $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
                 if ($("#quality").attr('class') == "high") {
                     audio_src = audio + $(this).attr('highq');
                 } else {
@@ -113,6 +115,8 @@ jQuery(document).ready(function () {
         var current_item = $('.mejs-list li.current:last'); // :last is added if we have few .current classes
         var audio = $(current_item).prev().attr('url');
         var type = $(current_item).prev().attr('audiotype');
+
+        $('audio#mejs').attr('onerror', "createGrowl();"); // Prevend onerror
         if ($("#quality").attr('class') == "high") {
             audio_src = audio + $(current_item).prev().attr('highq');
         } else {
@@ -143,6 +147,8 @@ jQuery(document).ready(function () {
         var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
         var audio = $(current_item).next().attr('url');
         var type = $(current_item).next().attr('audiotype');
+
+        $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
         if ($("#quality").attr('class') == "high") {
             audio_src = audio + $(current_item).next().attr('highq');
         } else {
@@ -201,7 +207,7 @@ jQuery(document).ready(function () {
             $(this).addClass('high');
             $(this).attr('title', 'Set music quality to low');
         } //low/high quality setting
-	    reloadAudio()
+        reloadAudio();
     });
 
     // load settings (experimental)
@@ -271,6 +277,8 @@ jQuery(document).ready(function () {
         var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
         var audio = $(current_item).next().attr('url');
         var type = $(current_item).next().attr('audiotype');
+
+        $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
         if ($("#quality").attr('class') == "high") {
             audio_src = audio + $(current_item).next().attr('highq');
         } else {
@@ -343,7 +351,7 @@ jQuery(document).ready(function () {
     }
 
     function reloadAudio() { //reload audio
-       var current_item = $('.mejs-list li.current');
+        var current_item = $('.mejs-list li.current');
         var audio = $(current_item).attr('url');
 
         if ($("#quality").attr('class') == "high") {
