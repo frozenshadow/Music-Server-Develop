@@ -230,7 +230,7 @@ jQuery(document).ready(function () {
             var lowq = $(this).find('.lowq').text();
             var highq = $(this).find('.highq').text();
 
-            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '" lowq="' + lowq + '" highq="' + highq + '"><img src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '" lowq="' + lowq + '" highq="' + highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
 
         });
 
@@ -304,6 +304,7 @@ jQuery(document).ready(function () {
 
     // Metadata sets the player information.
     function metadata() {
+	    $("img").unveil(500);
         var song = $('.mejs-list li.current');
         var title = song.find('.title').text();
         var artist = song.attr('artist');

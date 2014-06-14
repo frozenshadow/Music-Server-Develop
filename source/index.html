@@ -45,6 +45,7 @@ if (screen.width <= 960) {
 <link href="musicserver/server/qtip/jquery.qtip.css" rel="stylesheet" type="text/css" />
 <script src="musicserver/server/qtip/jquery.qtip.min.js"></script>
 <script src="musicserver/server/qtip/imagesloaded.pkg.min.js"></script>
+<script src="musicserver/server/js/jquery.unveil.js"></script>
 </head>
 
 <body>
@@ -102,43 +103,53 @@ if (screen.width <= 960) {
     <div id="qtip-growl-container"></div>
     
 <script>
-    (function($) {
-        $(window).load(function() {
-            $("#side-tracks").mCustomScrollbar({
-                scrollInertia: 500,
-				mouseWheelPixels: 200
-            });
-            $(".mejs-list").sortable({
-                scroll: false,
-                axis: "y",
-                change: function(event, ui) {
-                    var p = ui.position.top,
-                        h = ui.helper.outerHeight(true),
-                        s = ui.placeholder.position().top,
-                        elem = $("#side-tracks .mCustomScrollBox")[0],
-                        elemHeight = $("#side-tracks .mCustomScrollBox").height();
-                    pos = findPos(elem),
-                    mouseCoordsY = event.pageY - pos[0];
-                    if (mouseCoordsY < h || mouseCoordsY > elemHeight - h) {
-                        $("#side-tracks").mCustomScrollbar("scrollTo", p - (elemHeight / 2));
+(function ($) {
+    $(window).load(function () {
+        var c = 0;
+        $("#side-tracks").mCustomScrollbar({
+            scrollInertia: 500,
+            mouseWheelPixels: 200,
+            callbacks: {
+                whileScrolling: function () {
+                    c = c + 1;
+                    if (c == "25") {
+                        $("img").unveil(1000);
+                        c = 0;
                     }
                 }
-            });
-
-            function findPos(obj) {
-                var curleft = curtop = 0;
-                if (obj.offsetParent) {
-                    curleft = obj.offsetLeft;
-                    curtop = obj.offsetTop;
-                    while (obj = obj.offsetParent) {
-                        curleft += obj.offsetLeft;
-                        curtop += obj.offsetTop;
-                    }
-                }
-                return [curtop, curleft];
             }
         });
-    })(jQuery);
+        $(".mejs-list").sortable({
+            scroll: false,
+            axis: "y",
+            change: function (event, ui) {
+                var p = ui.position.top,
+                    h = ui.helper.outerHeight(true),
+                    s = ui.placeholder.position().top,
+                    elem = $("#side-tracks .mCustomScrollBox")[0],
+                    elemHeight = $("#side-tracks .mCustomScrollBox").height();
+                pos = findPos(elem),
+                mouseCoordsY = event.pageY - pos[0];
+                if (mouseCoordsY < h || mouseCoordsY > elemHeight - h) {
+                    $("#side-tracks").mCustomScrollbar("scrollTo", p - (elemHeight / 2));
+                }
+            }
+        });
+
+        function findPos(obj) {
+            var curleft = curtop = 0;
+            if (obj.offsetParent) {
+                curleft = obj.offsetLeft;
+                curtop = obj.offsetTop;
+                while (obj = obj.offsetParent) {
+                    curleft += obj.offsetLeft;
+                    curtop += obj.offsetTop;
+                }
+            }
+            return [curtop, curleft];
+        }
+    });
+})(jQuery);
 </script>
 
 </body>
