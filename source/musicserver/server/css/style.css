@@ -8,6 +8,10 @@ html, body {
 	height: 100%;
 }
 
+.mCSB_container {
+margin-right: 15px !important;
+}
+
 #wrapper {
     margin: 0 auto;
     width: 960px;
