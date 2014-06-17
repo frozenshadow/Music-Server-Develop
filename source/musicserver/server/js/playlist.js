@@ -66,34 +66,39 @@ jQuery(document).ready(function () {
         });
     });
 
-    //get data from playlist
-    $.ajax('musicserver/playlists/playlist.txt', {
-        dataType: 'text',
-        success: function (data) {
-            $('#playlist').html(data.replace(/[\\]/g, "/").replace(/[\#]/g, "%23"));
-            dataoffile();
-            firstplay();
+    $.each(playlistjson, function (idx, obj) {
 
-            $('.mejs-list li').dblclick(function () {
-                $(this).addClass('current').siblings().removeClass('current');
-                var audio = $(this).attr('url');
+        var title = obj.title;
+        var album = obj.album;
+        var artist = obj.creator;
+        var location = obj.location;
+        var albumart = obj.albumart;
+        var lowq = obj.lowq;
+        var highq = obj.highq;
 
-                $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
-                if ($("#quality").attr('class') == "high") {
-                    audio_src = audio + $(this).attr('highq');
-                } else {
-                    audio_src = audio + $(this).attr('lowq');
-                } //low/high quality setting
+        $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '" lowq="' + lowq + '" highq="' + highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+    }); //Loads up playlistjs that has been defined in playlist.js
+    firstplay();
 
-                $('audio#mejs:first').each(function () {
-                    if ($('#mejs').attr('src') != audio_src) {
-                        this.setSrc(audio_src);
-                    }
-                    playAudio();
-                    metadata();
-                });
-            });
-        }
+
+    $('.mejs-list li').dblclick(function () {
+        $(this).addClass('current').siblings().removeClass('current');
+        var audio = $(this).attr('url');
+
+        $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
+        if ($("#quality").attr('class') == "high") {
+            audio_src = audio + $(this).attr('highq');
+        } else {
+            audio_src = audio + $(this).attr('lowq');
+        } //low/high quality setting
+
+        $('audio#mejs:first').each(function () {
+            if ($('#mejs').attr('src') != audio_src) {
+                this.setSrc(audio_src);
+            }
+            playAudio();
+            metadata();
+        });
     });
 
     //buttons
@@ -125,7 +130,6 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).prev().addClass('current').siblings().removeClass('current');
-            //console.log('if ' + audio_src); // debugging only
         }
 
         if ($(current_item).is(':first-child')) { // if it is last - stop playing
@@ -157,7 +161,6 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
-            //console.log('if ' + audio_src); // debug only
         }
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
@@ -218,23 +221,8 @@ jQuery(document).ready(function () {
         }
     });
 
+
     /////////////////////////////////////////////////////////////////////	FUNCTIONS
-
-    function dataoffile() {
-        $(".track").each(function () {
-            var title = $(this).find('.title').text();
-            var album = $(this).find('.album').text();
-            var artist = $(this).find('.creator').text();
-            var location = $(this).find('.location').text();
-            var albumart = $(this).find('.albumart').text();
-            var lowq = $(this).find('.lowq').text();
-            var highq = $(this).find('.highq').text();
-
-            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '" lowq="' + lowq + '" highq="' + highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
-
-        });
-
-    }
 
     function firstplay() {
         var first_child = '.mejs-list li:first-child';
@@ -249,7 +237,7 @@ jQuery(document).ready(function () {
 
         $('audio#mejs:first').each(function () {
             if ($('#mejs').attr('src') != audio_src) {
-                this.setSrc(audio_src);
+                $('#mejs').attr('src', audio_src); //dirty hack otherwise it wont work.
             }
             metadata();
         });
@@ -288,7 +276,6 @@ jQuery(document).ready(function () {
 
         if ($('.mejs-list li.current').length > 0) { // get the .current song
             $(current_item).next().addClass('current').siblings().removeClass('current');
-            //console.log('if ' + audio_src); // debug only
         }
 
         if ($(current_item).is(':last-child')) { // if it is last - stop playing
@@ -304,7 +291,7 @@ jQuery(document).ready(function () {
 
     // Metadata sets the player information.
     function metadata() {
-	    $("img").unveil(500);
+        $("img").unveil(500);
         var song = $('.mejs-list li.current');
         var title = song.find('.title').text();
         var artist = song.attr('artist');
@@ -362,14 +349,12 @@ jQuery(document).ready(function () {
         } //low/high quality setting
 
         $('audio#mejs:first').each(function () {
-            if ($('#mejs').attr('src') != audio_src) {
-                this.setSrc(audio_src);
-            }
+            this.setSrc('reload');
+            this.setSrc(audio_src);
             if ($('#pause').attr('class') == 'visible') {
                 playAudio();
             } //keep play state.
             metadata();
-            csbscroll();
         });
     }
 
