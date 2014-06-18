@@ -1,11 +1,90 @@
-var playlistjson = [
+var musicserver =
 
-{"title":"Americana","creator":"Kevin MacLeod","album":"Royalty Free","location":"music\/Kevin MacLeod\/samplemusic\/Americana","albumart":"music\/Kevin MacLeod\/samplemusic\/example.png","lowq":".mp3","highq":".mp3"},
-{"title":"Black Vortex","creator":"Kevin MacLeod","album":"Royalty Free","location":"music\/Kevin MacLeod\/samplemusic\/Black Vortex","albumart":"music\/Kevin MacLeod\/samplemusic\/examples.jpg","lowq":".mp3","highq":".mp3"},
-{"title":"Call to Adventure","creator":"Kevin MacLeod","album":"Royalty Free","location":"music\/Kevin MacLeod\/samplemusic\/Call to Adventure","albumart":"music\/Kevin MacLeod\/samplemusic\/crop.jpg","lowq":".mp3","highq":".mp3"},
-{"title":"Hitman","creator":"Kevin MacLeod","album":"Royalty Free","location":"music\/Kevin MacLeod\/samplemusic\/Hitman","albumart":"music\/Kevin MacLeod\/samplemusic\/front.jpg","lowq":".mp3","highq":".mp3"},
-{"title":"Return of Lazarus","creator":"Kevin MacLeod","album":"Royalty Free","location":"music\/Kevin MacLeod\/samplemusic\/Return of Lazarus","albumart":"music\/Kevin MacLeod\/samplemusic\/front.jpg","lowq":".mp3","highq":".mp3"},
-{"title":"The Complex","creator":"Kevin MacLeod","album":"Royalty Free","location":"music\/Kevin MacLeod\/samplemusic\/The Complex","albumart":"music\/Kevin MacLeod\/samplemusic\/front.jpg","lowq":".mp3","highq":".mp3"},
-{"title":"The Descent","creator":"Kevin MacLeod","album":"Royalty Free","location":"music\/Kevin MacLeod\/samplemusic\/The Descent","albumart":"music\/Kevin MacLeod\/samplemusic\/front.jpg","lowq":".mp3","highq":".mp3"},
-
-];
+{
+    "demo": [
+        {
+            "title": "Americana",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/Americana",
+            "albumart": "music/Kevin MacLeod/samplemusic/example.png",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        },
+        {
+            "title": "Black Vortex",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/Black Vortex",
+            "albumart": "music/Kevin MacLeod/samplemusic/examples.jpg",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        },
+        {
+            "title": "Call to Adventure",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/Call to Adventure",
+            "albumart": "music/Kevin MacLeod/samplemusic/crop.jpg",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        },
+        {
+            "title": "Hitman",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/Hitman",
+            "albumart": "music/Kevin MacLeod/samplemusic/front.jpg",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        },
+        {
+            "title": "Return of Lazarus",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/Return of Lazarus",
+            "albumart": "music/Kevin MacLeod/samplemusic/front.jpg",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        },
+        {
+            "title": "The Complex",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/The Complex",
+            "albumart": "music/Kevin MacLeod/samplemusic/front.jpg",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        },
+        {
+            "title": "The Descent",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/The Descent",
+            "albumart": "music/Kevin MacLeod/samplemusic/front.jpg",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        }
+    ],
+	
+    "Favorieten": [
+        {
+            "title": "Americana",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/Americana",
+            "albumart": "music/Kevin MacLeod/samplemusic/example.png",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        },
+        {
+            "title": "Black Vortex",
+            "creator": "Kevin MacLeod",
+            "album": "Royalty Free",
+            "location": "music/Kevin MacLeod/samplemusic/Black Vortex",
+            "albumart": "music/Kevin MacLeod/samplemusic/examples.jpg",
+            "lowq": ".mp3",
+            "highq": ".mp3"
+        }
+    ]
+}

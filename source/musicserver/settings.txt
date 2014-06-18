@@ -2,12 +2,12 @@
 	<tbody>
 		<tr>
 			<td style="padding-right: 15px;"><span>Playlist:</span></td>
-			<td style="padding: 3px;"><select>
-				<option selected value="demo">
-					Demo
+			<td style="padding: 3px;"><select id="playlist-select">
+				<option selected value="playlistjson">
+					playlistjson
 				</option>
-				<option value="favorieten">
-					Favorieten
+				<option value="playlistjson2">
+					playlistjson2
 				</option>
 			</select></td>
 		</tr>
