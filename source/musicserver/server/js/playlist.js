@@ -88,28 +88,28 @@
 
 
         $.each(playlists, function (idx, obj) {
-        if (!$("#playlist-select option[value='" + obj.playlist + "']").length > 0) {
-            $('#playlist-select').append("<option value='" + obj.playlist + "'>" + obj.playlist + "</option>");
-        }
-       }); //add playlists variable to dropdown menu (can be found in playlist.json)
+            if ($("#playlist-select option[value='" + obj.playlist + "']").length < 1) {
+                $('#playlist-select').append("<option value='" + obj.playlist + "'>" + obj.playlist + "</option>");
+            }
+        }); //add playlists variable to dropdown menu (can be found in playlist.json)
 
         $("#playlist-select").change(function () {
             stopAudio();
             JSONload();
             firstplay();
 
-            $('.mejs-list li').dblclick(function (nein) {
-            var clicked = $(this).addClass('current').siblings().removeClass('current');
-            var audio = $(this).attr('url');
-     			listdblclick(clicked, audio);
+            $('.mejs-list li').dblclick(function () {
+                var clicked = $(this).addClass('current').siblings().removeClass('current');
+                var audio = $(this).attr('url');
+                listdblclick(clicked, audio);
             });
         });
 
-			$('.mejs-list li').dblclick(function () {
+        $('.mejs-list li').dblclick(function () {
             var clicked = $(this).addClass('current').siblings().removeClass('current');
             var audio = $(this).attr('url');
-     			listdblclick(clicked, audio);
-            });
+            listdblclick(clicked, audio);
+        });
 
         //buttons
         $('#play').click(function () {
@@ -226,20 +226,20 @@
         function JSONload() {
             var playlistselect = $("#playlist-select").val();
 
-            $(".mejs-list").empty();
+            $(".mejs-list").empty(); //clean list before adding
 
 
             $.each(musicserver[playlistselect], function (idx, obj) {
-			if (obj.title === undefined || obj.creator === undefined || obj.album === undefined || obj.location === undefined || obj.albumart === undefined || obj.lowq === undefined || obj.highq === undefined) {
-			//since 1 or more object detail(s) is/are missing look it up in the main table.
-			$.each(getObjects(musicserver.allitems, 'ID', obj.ID), function (idx, obj) {
+                if (obj.title === undefined || obj.creator === undefined || obj.album === undefined || obj.location === undefined || obj.albumart === undefined || obj.lowq === undefined || obj.highq === undefined) {
+                    //since 1 or more object detail(s) is/are missing look it up in the main table.
+                    $.each(getObjects(musicserver.allitems, 'ID', obj.ID), function (idx, obj) {
+                        $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.creator + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.creator + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
+                    });
+                } else {
+                    //if we have all the object details why bother looking up the details just fill it in.
                     $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.creator + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.creator + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
-                });
-			} else {
-			//if we have all the object details why bother looking up the details just fill it in.
-                $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.creator + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.creator + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
-            }
-			}); //Loads up playlistjs that has been defined in playlist.js
+                }
+            }); //Loads up playlistjs that has been defined in playlist.js
             $("#side-tracks").mCustomScrollbar("update");
         }
 
@@ -342,7 +342,7 @@
             } //sets artist cover if #artist is in the html
 
             //$('title').html(title); //sets window title to the title of the current song
-			
+
             $('#download').attr('title', 'Download "' + title + '"'); //sets info of the download button to the title of the current song
 
             $('#headertext span:last').remove();
@@ -364,7 +364,7 @@
             })();
 
         }
-        
+
         function listdblclick(clicked, audio) {
 
             $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
@@ -381,7 +381,7 @@
                 playAudio();
                 metadata();
             });
-        }; //dblclick on the playlist will cause the number to change this is the function for that.
+        } //dblclick on the playlist will cause the number to change this is the function for that.
 
         function csbscroll() {
             $("#side-tracks").mCustomScrollbar("scrollTo", ".current");
