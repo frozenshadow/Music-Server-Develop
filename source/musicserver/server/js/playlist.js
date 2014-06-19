@@ -86,53 +86,28 @@
         }
     });*/
 
+
+        $.each(playlists, function (idx, obj) {
+            $('#playlist-select').append("<option>" + obj.playlist + "</option>");
+        }); //add playlists variable to dropdown menu (can be found in playlist.json)
+
         $("#playlist-select").change(function () {
-			stopAudio();
+            stopAudio();
             JSONload();
             firstplay();
-			
-			// Double click on desired track, why not working if outside change only??
-				$('.mejs-list li').dblclick(function () {
-				$(this).addClass('current').siblings().removeClass('current');
-				var audio = $(this).attr('url');
-	
-				$('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
-				if ($("#quality").attr('class') == "high") {
-					audio_src = audio + $(this).attr('highq');
-				} else {
-					audio_src = audio + $(this).attr('lowq');
-				} //low/high quality setting
-	
-				$('audio#mejs:first').each(function () {
-					if ($('#mejs').attr('src') !== audio_src) {
-						this.setSrc(audio_src);
-					}
-					playAudio();
-					metadata();
-				});
-			});
-        });
 
-
-        $('.mejs-list li').dblclick(function () {
-            $(this).addClass('current').siblings().removeClass('current');
+            $('.mejs-list li').dblclick(function (nein) {
+            var clicked = $(this).addClass('current').siblings().removeClass('current');
             var audio = $(this).attr('url');
-
-            $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
-            if ($("#quality").attr('class') == "high") {
-                audio_src = audio + $(this).attr('highq');
-            } else {
-                audio_src = audio + $(this).attr('lowq');
-            } //low/high quality setting
-
-            $('audio#mejs:first').each(function () {
-                if ($('#mejs').attr('src') !== audio_src) {
-                    this.setSrc(audio_src);
-                }
-                playAudio();
-                metadata();
+     			listdblclick(clicked, audio);
             });
         });
+
+			$('.mejs-list li').dblclick(function () {
+            var clicked = $(this).addClass('current').siblings().removeClass('current');
+            var audio = $(this).attr('url');
+     			listdblclick(clicked, audio);
+            });
 
         //buttons
         $('#play').click(function () {
@@ -152,7 +127,6 @@
         $('#prev').click(function () {
             var current_item = $('.mejs-list li.current:last'); // :last is added if we have few .current classes
             var audio = $(current_item).prev().attr('url');
-            var type = $(current_item).prev().attr('audiotype');
 
             $('audio#mejs').attr('onerror', "createGrowl();"); // Prevent onerror
             if ($("#quality").attr('class') == "high") {
@@ -183,7 +157,6 @@
         $('#next').click(function () {
             var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
             var audio = $(current_item).next().attr('url');
-            var type = $(current_item).next().attr('audiotype');
 
             $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
             if ($("#quality").attr('class') == "high") {
@@ -253,17 +226,11 @@
 
             $(".mejs-list").empty();
 
+
             $.each(musicserver[playlistselect], function (idx, obj) {
-
-                var title = obj.title;
-                var album = obj.album;
-                var artist = obj.creator;
-                var location = obj.location;
-                var albumart = obj.albumart;
-                var lowq = obj.lowq;
-                var highq = obj.highq;
-
-                $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '" lowq="' + lowq + '" highq="' + highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+                $.each(getObjects(musicserver.allitems, 'title', obj.title), function (idx, obj) {
+                    $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.creator + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.creator + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
+                });
             }); //Loads up playlistjs that has been defined in playlist.js
             $("#side-tracks").mCustomScrollbar("update");
         }
@@ -287,6 +254,19 @@
             });
         }
 
+        function getObjects(obj, key, val) {
+            var objects = [];
+            for (var i in obj) {
+                if (!obj.hasOwnProperty(i)) continue;
+                if (typeof obj[i] == 'object') {
+                    objects = objects.concat(getObjects(obj[i], key, val));
+                } else if (i == key && obj[key] == val) {
+                    objects.push(obj);
+                }
+            }
+            return objects;
+        } //playlist search
+
         function playAudio() {
             $('audio#mejs:first').each(function () {
                 this.play();
@@ -308,7 +288,6 @@
         function mejsPlayNext(currentPlayer) {
             var current_item = $('.mejs-list li.current:first'); // :first is added if we have few .current classes
             var audio = $(current_item).next().attr('url');
-            var type = $(current_item).next().attr('audiotype');
 
             $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
             if ($("#quality").attr('class') == "high") {
@@ -337,16 +316,14 @@
         function metadata() {
             $("img").unveil(500);
             var song = $('.mejs-list li.current');
-            var title = song.find('.title').text();
-            var artist = song.attr('artist');
-            var album = song.find('img').attr('alt');
-            var cover = song.find('img').attr('src');
-            var cover2 = $(".cover img").attr('src');
-            cover = cover + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
-            cover2 = cover2 + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
+            var title = decodeURIComponent(song.find('.title').text());
+            var artist = decodeURIComponent(song.attr('artist'));
+            var album = decodeURIComponent(song.find('img').attr('alt'));
+            var cover = song.find('img').attr('src') + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
+            var cover2 = $(".cover img").attr('src') + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
 
-            $('.title-player span').text(decodeURIComponent(title));
-            $('.artist-album span').text(decodeURIComponent(artist) + ' - ' + decodeURIComponent(album));
+            $('.title-player span').text(title);
+            $('.artist-album span').text(artist + ' - ' + album);
 
             if (cover2 != cover) {
                 $('.cover').html('<img src="' + cover + '/>');
@@ -377,6 +354,24 @@
             })();
 
         }
+        
+        function listdblclick(clicked, audio) {
+
+            $('audio#mejs').attr('onerror', "$('#next').click();createGrowl();"); // recreate onerror
+            if ($("#quality").attr('class') == "high") {
+                audio_src = audio + $(clicked).attr('highq');
+            } else {
+                audio_src = audio + $(clicked).attr('lowq');
+            } //low/high quality setting
+
+            $('audio#mejs:first').each(function () {
+                if ($('#mejs').attr('src') !== audio_src) {
+                    this.setSrc(audio_src);
+                }
+                playAudio();
+                metadata();
+            });
+        };
 
         function csbscroll() {
             $("#side-tracks").mCustomScrollbar("scrollTo", ".current");
