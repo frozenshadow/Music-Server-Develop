@@ -1,25 +1,30 @@
 var playlists = [
+{playlist:"allitems"},
 {playlist:"Favorieten"},
 //{playlist:"Favorieten2"},
-]; //these will be added to
+]; //these will be added to the drop-down select if they don't exist
 
 var musicserver = {
     Favorieten: [
-{title:"Americana"},
-{title:"Black Vortex"}
+{ID:"1"},
+{ID:"2"},
+{title:"George Street Shuffle",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/George Street Shuffle",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"},
+{title:"Teller of the Tales",creator:"Kevin MacLeod",album:"Medieval Game Pack 2","location":"music/Kevin MacLeod/samplemusic/Teller of the Tales",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"}
     ],
     allitems: [
-{title:"Americana",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Americana",albumart:"music/Kevin MacLeod/samplemusic/example.png",lowq:".mp3",highq:".mp3"},
-{title:"Black Vortex",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Black Vortex",albumart:"music/Kevin MacLeod/samplemusic/examples.jpg",lowq:".mp3",highq:".mp3"},
-{title:"Call to Adventure",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Call to Adventure",albumart:"music/Kevin MacLeod/samplemusic/crop.jpg",lowq:".mp3",highq:".mp3"},
-{title:"Hitman",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Hitman",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"},
-{title:"Return of Lazarus",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Return of Lazarus",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"},
-{title:"The Complex",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/The Complex",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"},
-{title:"The Descent",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/The Descent",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"}
+{ID:"1",title:"Americana",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Americana",albumart:"music/Kevin MacLeod/samplemusic/example.png",lowq:".mp3",highq:".mp3"},
+{ID:"2",title:"Black Vortex",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Black Vortex",albumart:"music/Kevin MacLeod/samplemusic/examples.jpg",lowq:".mp3",highq:".mp3"},
+{ID:"3",title:"Call to Adventure",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Call to Adventure",albumart:"music/Kevin MacLeod/samplemusic/crop.jpg",lowq:".mp3",highq:".mp3"},
+{ID:"4",title:"Hitman",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Hitman",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"},
+{ID:"5",title:"Return of Lazarus",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Return of Lazarus",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"},
+{ID:"6",title:"The Complex",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/The Complex",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"},
+{ID:"7",title:"The Descent",creator:"Kevin MacLeod",album:"Royalty Free","location":"music/Kevin MacLeod/samplemusic/The Descent",albumart:"music/Kevin MacLeod/samplemusic/front.jpg",lowq:".mp3",highq:".mp3"}
     ],
 }
+
 //allitems will be used to get song information.
 //for every new playlist just add:
 //playlistname: [
-//{title:"Americana"},
+//{ID:"1"},
 //],
+//to the var musicserver = { }
