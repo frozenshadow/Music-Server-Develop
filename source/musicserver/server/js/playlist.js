@@ -546,4 +546,16 @@
 
     });
 
+    //$.getJSON( "musicserver/playlists/playlist.json", function( data ) {
+    //  var items = [];
+    //  $.each( data, function( key, val ) {
+    //    items.push( "<li id='" + key + "'>" + val + "</li>" );
+    // console.log(val)
+    //  });
+    //  $( "<ul/>", {
+    //    "class": "my-new-list",
+    //    html: items.join( "" )
+    //  })
+    //});
+
 }(jQuery));
