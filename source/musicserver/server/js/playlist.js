@@ -97,6 +97,7 @@
             stopAudio();
             JSONload();
             firstplay();
+            reloadAudio();
 
             $('.mejs-list li').dblclick(function () {
                 var clicked = $(this).addClass('current').siblings().removeClass('current');
@@ -226,18 +227,46 @@
         function JSONload() {
             var playlistselect = $("#playlist-select").val();
 
-            $(".mejs-list").empty(); //clean list before adding
-
+            $(".mejs-list").empty(); //clean list before (re)adding
 
             $.each(musicserver[playlistselect], function (idx, obj) {
-                if (obj.title === undefined || obj.creator === undefined || obj.album === undefined || obj.location === undefined || obj.albumart === undefined || obj.lowq === undefined || obj.highq === undefined) {
+                if (obj.title === undefined || obj.artist === undefined || obj.album === undefined || obj.location === undefined || obj.albumart === undefined || obj.lowq === undefined || obj.highq === undefined) {
                     //since 1 or more object detail(s) is/are missing look it up in the main table.
-                    $.each(getObjects(musicserver.allitems, 'ID', obj.ID), function (idx, obj) {
-                        $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.creator + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.creator + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
+                    if (obj.ID !== undefined) {
+                        key = 'ID';
+                        val = obj.ID;
+                    } else if (obj.location !== undefined) {
+                        key = 'location';
+                        val = obj.location;
+                    } else if (obj.title !== undefined) {
+                        key = 'title';
+                        val = obj.title;
+                    } else if (obj.album !== undefined) {
+                        key = 'album';
+                        val = obj.album;
+                    } else if (obj.artist !== undefined) {
+                        key = 'artist';
+                        val = obj.artist;
+                    } else if (obj.lowq !== undefined) {
+                        key = 'lowq';
+                        val = obj.lowq;
+                    } else if (obj.highq !== undefined) {
+                        key = 'highq';
+                        val = obj.highq;
+                    } else {
+                        console.log('invalid object found in playlist: ' + playlistselect);
+                        return;
+                    }
+                    $.each(getObjects(musicserver, key, val), function (idx, obj) { //search with valid a value in the main table.
+                        //if any of these value's is/are still undefined ignore the entire object
+                        if (obj.title === undefined || obj.artist === undefined || obj.album === undefined || obj.location === undefined || obj.albumart === undefined || obj.lowq === undefined || obj.highq === undefined) {
+                            return;
+                        }
+                        $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.artist + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.artist + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
                     });
                 } else {
                     //if we have all the object details why bother looking up the details just fill it in.
-                    $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.creator + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.creator + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
+                    $('.mejs-list').append('<li url="' + obj.location + '" artist="' + obj.artist + '" lowq="' + obj.lowq + '" highq="' + obj.highq + '"><img src="musicserver/server/images/unknown_album.svg"' + 'data-src="' + obj.albumart + '" onerror=' + '"this.src=' + "'musicserver/server/images/unknown_album.svg'" + '" alt="' + obj.album + '"><div class="title ellipsis"><span>' + decodeURIComponent(obj.title) + '</span></div><div class="aa ellipsis"><span>' + obj.artist + ' - ' + decodeURIComponent(obj.album) + '</span></div></li>');
                 }
             }); //Loads up playlistjs that has been defined in playlist.js
             $("#side-tracks").mCustomScrollbar("update");
@@ -327,7 +356,7 @@
             var title = decodeURIComponent(song.find('.title').text());
             var artist = decodeURIComponent(song.attr('artist'));
             var album = decodeURIComponent(song.find('img').attr('alt'));
-            var cover = song.find('img').attr('src') + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
+            var cover = song.find('img').attr('data-src') + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
             var cover2 = $(".cover img").attr('src') + '" onerror="this.src=\'musicserver/server/images/unknown_album.svg\'"';
 
             $('.title-player span').text(title);
