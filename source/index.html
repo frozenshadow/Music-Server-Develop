@@ -2,28 +2,8 @@
 <html><head>
 <meta charset="utf-8">
 <title>Music Server - SERVERNAME</title>
-
-<!--Detect Mobile Browser OR screen size-->
-<script src="musicserver/server/js/detectmobilebrowser.js" /></script>
-<script>
-<!--
-if (screen.width <= 960) {
-	document.location = "musicserver/server/mobile";
-}
-//-->
-</script>
-
-
-<!--JQUERY LIBARIES + HTML5 SHIV-->
-<!--[if lt IE 9]>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-    <script src="musicserver/server/js/jquery-2.1.0.min.js"></script>
-<!--<![endif]-->
+<script src="musicserver/server/js/jquery-2.1.0.min.js"></script>
 <script src="musicserver/server/js/jquery-ui-1.10.4.custom.min.js"></script>
-<link rel="stylesheet" href="musicserver/server/css/jquery-ui-1.10.4.custom.css">
 
 <link rel="stylesheet" href="musicserver/server/css/cssreset-min.css">
 
@@ -36,17 +16,16 @@ if (screen.width <= 960) {
 <script src="musicserver/server/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <!--MEDIAELEMENT.JS + PLAYLIST PLUGIN-->
-<script src="musicserver/server/mediaelement/mediaelement-and-player.min.js"></script>
-<link rel="stylesheet" type="text/css" href="musicserver/server/mediaelement/mediaelementplayer.css">
-
-<script src="musicserver/server/js/jquery.shuffle.min.js"></script>
+<!--<script src="musicserver/server/js/replacemejs.js"></script>-->
 <script src="musicserver/server/js/playlist.js"></script>
 <link rel="stylesheet" href="musicserver/server/css/playlist.css">
-<link href="musicserver/server/qtip/jquery.qtip.css" rel="stylesheet">
-<script src="musicserver/server/qtip/jquery.qtip.min.js"></script>
-<script src="musicserver/server/qtip/imagesloaded.pkg.min.js"></script>
 <script src="musicserver/server/js/jquery.unveil.js"></script>
-<script src="musicserver/playlists/playlist.json"></script>
+<script src='aurora.js'></script>
+<script src='codecs/alac.js'></script>
+<script src='codecs/flac.js'></script>
+<script src='codecs/mp3.js'></script>
+<script src='codecs/ogg.js'></script>
+<script src='codecs/opus.js'></script>
 </head>
 
 <body>
@@ -108,8 +87,20 @@ if (screen.width <= 960) {
 					<div id="pause" title="Pause audio"></div>
                     <div id="next" title="Next song"></div>
                     <div id="shuffle" title="Shuffle songs"></div>
+                    <div id="mute" title="mute sound"></div>
+        			<div class="currenttime"><span>00:00</span></div>
+        			<div class="maxtime"><span>00:00</span></div>
+       			 	<div class="bottomrail">
+       			 		<div class="bottomrailprogres"></div>
+       			 		<div class="currentrail"></div>
+       			 		<div class="railhandle"></div>
+       			 	</div>
+       			 	<div class="maxvolume">
+       			 		<div class="currentvolume"></div>
+       			 		<div class="volumehandle"></div>
+       			 	</div>
                 </div>
-                <audio id="mejs" src="dummy" type="audio/wav" onerror="$('#next').click();createGrowl();" controls></audio>
+                <audio id="mejs" src="dummy" type="audio/wav" onerror=""></audio>
             </div>
         </div>
 	</div>
@@ -119,59 +110,13 @@ if (screen.width <= 960) {
         	<span>Thank you for using Music Server 1.2.0 | <a href="#" target="_blank">Feedback</a> | <a href="https://github.com/frozenshadow/Music-Server-Develop/wiki" target="_blank">Documentation</a></span>
         </div>
     </footer>
-    
     <div id="qtip-growl-container"></div>
     
-<script>
-(function ($) {
-    $(window).load(function () {
-        var c = 0;
-        $("#side-tracks").mCustomScrollbar({
-            scrollInertia: 500,
-            callbacks: {
-            onScroll:function(){
-                        $("img").unveil(1000);
-			},
-                whileScrolling: function () {
-                    c = c + 1;
-                    if (c == "25") {
-                        $("img").unveil(1000);
-                        c = 0;
-                    }
-                }
-            }
-        });
-        $(".mejs-list").sortable({
-            scroll: false,
-            axis: "y",
-            change: function (event, ui) {
-                var p = ui.position.top,
-                    h = ui.helper.outerHeight(true),
-                    s = ui.placeholder.position().top,
-                    elem = $("#side-tracks .mCustomScrollBox")[0],
-                    elemHeight = $("#side-tracks .mCustomScrollBox").height();
-                pos = findPos(elem),
-                mouseCoordsY = event.pageY - pos[0];
-                if (mouseCoordsY < h || mouseCoordsY > elemHeight - h) {
-                    $("#side-tracks").mCustomScrollbar("scrollTo", p - (elemHeight / 2));
-                }
-            }
-        });
-
-        function findPos(obj) {
-            var curleft = curtop = 0;
-            if (obj.offsetParent) {
-                curleft = obj.offsetLeft;
-                curtop = obj.offsetTop;
-                while (obj = obj.offsetParent) {
-                    curleft += obj.offsetLeft;
-                    curtop += obj.offsetTop;
-                }
-            }
-            return [curtop, curleft];
-        }
-    });
-})(jQuery);
-</script>
 </body>
+<!--<script>
+    	var player = AV.Player
+        var audioPlayer = player.fromURL('A Line In The Sand.m4a'); //get audio player
+        var volume = audioPlayer.volume;
+
+</script>-->
 </html>

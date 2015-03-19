@@ -8,6 +8,7 @@ var playlists = [
 
 var musicserver = {
     "Demo": [
+{"ID":"1","title":"Jesus He Knows Me","artist":"Genesis","album":"We Can't Dance","location":"music/Genesis/We Can't Dance/Jesus He Knows Me","albumart":"music/Genesis/We Can't Dance/Genesis_-_We_Can't_Dance.jpg","lowq":".flac","highq":".flac"},
 {"ID":"1","title":"Americana","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Americana","albumart":"music/Kevin MacLeod/samplemusic/example.png","lowq":".mp3","highq":".mp3"},
 {"ID":"2","title":"Black Vortex","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Black Vortex","albumart":"music/Kevin MacLeod/samplemusic/examples.jpg","lowq":".mp3","highq":".mp3"},
 {"ID":"3","title":"Call to Adventure","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Call to Adventure","albumart":"music/Kevin MacLeod/samplemusic/crop.jpg","lowq":".mp3","highq":".mp3"},

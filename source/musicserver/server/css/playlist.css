@@ -97,32 +97,31 @@ right: 0;
 	right: -25px;
 }
 
-.mejs-controls .mejs-button button {
+#mute {
     background: url("../images/controls.svg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 41px;
     margin: 0;
-    right: 43px;
-    top: -52px;
+    top: 18px;
     width: 41px;
+	right: 61px;
+	background-position: 0 -280px;
+	position: absolute;
+	cursor: pointer;
 }
 
 .mejs-controls .mejs-button button:focus {
     outline: none !important;
 }
 
-.mejs-controls .mejs-mute button {
-    background-position: 0 -280px;
-}
-
-.mejs-controls .mejs-unmute button {
+#mute.muted {
 	background-position: 0 -238px;
 }
 
-.mejs-controls .mejs-mute button:hover {
+#mute:hover {
     background-position: -42px -280px;
 }
 
-.mejs-controls .mejs-unmute button:hover {
+#mute.muted:hover {
 	background-position: -42px -238px;
 }
 
@@ -154,4 +153,89 @@ right: 0;
     height: 10px;
     left: 0;
     width: 10px;
+}
+
+audio#mejs {
+	display: none;
+}
+
+div.maxtime {
+	float: right;
+	bottom: -85px;
+	position: absolute;
+	right: 30px;
+}
+
+div.currenttime {
+	float: left;
+	bottom: -85px;
+	position: absolute;
+	left: 15px;
+}
+
+div.bottomrail {
+	width: 450px;
+	height: 5px;
+	cursor: pointer;
+	background-color: #AEAEAE;
+	position: absolute;
+	bottom: -80px;
+	left: 65px;
+}
+
+div.currentrail {
+	width: 0px;
+	cursor: pointer;
+	height: 5px;
+	background-color: #215CAC;
+	position: absolute;
+}
+
+div.bottomrailprogres {
+	width: 0px;
+	cursor: pointer;
+	height: 5px;
+	background-color: #dadada;
+	position: absolute;
+}
+
+div.railhandle {
+	background-image: url(../images/handle.svg);
+	cursor: pointer;
+	height: 12px;
+	width: 12px;
+	position: absolute;
+	text-align: center;
+	margin: 0;
+	top: -4px;
+	margin-left: -5px;
+}
+
+div.maxvolume {
+	width: 4px;
+	background-color: #AEAEAE;
+	height: 70px;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	cursor: pointer;
+}
+
+div.currentvolume {
+	width: 4px;
+	height: 70px;
+	position: absolute;
+	background-color: #215CAC;
+	bottom: 0px;
+	cursor: pointer;
+}
+
+div.volumehandle {
+	background: url("../images/handle.svg") repeat scroll 0 0 / 10px auto rgba(0, 0, 0, 0);
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	right: -2.75px;
+	cursor: pointer;
+	margin-top: -4px;
 }

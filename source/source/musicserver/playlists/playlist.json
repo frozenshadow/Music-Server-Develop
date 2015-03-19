@@ -1,0 +1,49 @@
+var playlists = [
+{"playlist":"Demo"},
+{"playlist":"Mixed"},
+{"playlist":"Favorieten"},
+{"playlist":"Easymode"},
+{"playlist":"wrong"},
+]; //these will be added to the drop-down select if they don't exist
+
+var musicserver = {
+    "Demo": [
+{"ID":"1","title":"Americana","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Americana","albumart":"music/Kevin MacLeod/samplemusic/example.png","lowq":".mp3","highq":".mp3"},
+{"ID":"2","title":"Black Vortex","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Black Vortex","albumart":"music/Kevin MacLeod/samplemusic/examples.jpg","lowq":".mp3","highq":".mp3"},
+{"ID":"3","title":"Call to Adventure","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Call to Adventure","albumart":"music/Kevin MacLeod/samplemusic/crop.jpg","lowq":".mp3","highq":".mp3"},
+{"ID":"4","title":"Hitman","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Hitman","albumart":"music/Kevin MacLeod/samplemusic/front.jpg","lowq":".mp3","highq":".mp3"},
+{"ID":"5","title":"Return of Lazarus","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/Return of Lazarus","albumart":"music/Kevin MacLeod/samplemusic/front.jpg","lowq":".mp3","highq":".mp3"},
+{"ID":"6","title":"The Complex","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/The Complex","albumart":"music/Kevin MacLeod/samplemusic/front.jpg","lowq":".mp3","highq":".mp3"},
+{"ID":"7","title":"The Descent","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/The Descent","albumart":"music/Kevin MacLeod/samplemusic/front.jpg","lowq":".mp3","highq":".mp3"},
+{"ID":"8","title":"Teller of the Tales","artist":"Kevin MacLeod","album":"Medieval Game Pack 2","location":"music/Kevin MacLeod/samplemusic/Teller of the Tales","albumart":"music/Kevin MacLeod/samplemusic/front.jpg","lowq":".mp3","highq":".mp3"}
+    ],
+    "Favorieten": [
+{"ID":"1"},
+{"ID":"2"}
+    ],
+    
+    "Easymode": [
+{"highq":".mp3"}
+    ],
+    
+    "Mixed": [
+{"title":"The Complex"},
+{"location":"music/Kevin MacLeod/samplemusic/Return of Lazarus"},
+{"album":"Medieval Game Pack 2"},
+{"ID":"9","title":"George Street Shuffle","artist":"Kevin MacLeod","album":"Royalty Free","location":"music/Kevin MacLeod/samplemusic/George Street Shuffle","albumart":"music/Kevin MacLeod/samplemusic/front.jpg","lowq":".mp3","highq":".mp3"}
+	],
+	
+	"wrong": [
+{"title":"george Street Shuffle"}, //this one will be ignored
+{"album":"Medieval Game Pack 2"}
+	]
+}
+
+//for every new playlist just add:
+//playlistname: [
+//{"ID":"1"},
+//],
+//to the var musicserver = { }
+//any variable can be used.
+// ID, title, artist, album, location, albumart, lowq, highq.
+//be aware that if you have the information for one object twice it will also find it twice.
