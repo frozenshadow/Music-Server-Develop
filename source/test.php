@@ -5,7 +5,7 @@ update 20-03-2015
 Changed to PDO
 */
 
-$db = new PDO('sqlite://mnt/sda1/www/source/Music.sqlite');
+$db = new PDO('sqlite://Music.sqlite');
 
 $db->exec(
 'CREATE TABLE songs 
