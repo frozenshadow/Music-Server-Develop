@@ -1,16 +1,45 @@
 <?php
-$db = new SQLite3('Music.sqlite');
+
+/*
+update 20-03-2015
+Changed to PDO
+*/
+
+$db = new PDO('sqlite://Music.sqlite');
 
 $db->exec(
-'CREATE TABLE Songs (ID INTEGER PRIMARY KEY, ArtistName TEXT, TrackTitle TEXT, Date TEXT, Genre TEXT, Composer TEXT, Performer TEXT, AlbumArtist TEXT, TrackNumber INTEGER, TotalTracks INTEGER, DiscNumber INTEGER, TotalDiscs INTEGER);'
+'CREATE TABLE songs 
+	( 
+		id          INTEGER PRIMARY KEY, 
+		artistname  TEXT, 
+		tracktitle  TEXT, 
+		date        TEXT, 
+		genre       TEXT, 
+		composer    TEXT, 
+		performer   TEXT, 
+		albumartist TEXT, 
+		tracknumber INTEGER, 
+		totaltracks INTEGER, 
+		discnumber  INTEGER, 
+		totaldiscs  INTEGER 
+	);'
 );
 
 $db->exec(
-'CREATE TABLE PlaylistSongs (IDPlaylistSong INTEGER PRIMARY KEY, IDPlaylist INTEGER REFERENCES Playlists (IDPlaylist), IDSong INTEGER REFERENCES Songs (ID));'
+'CREATE TABLE IF NOT EXISTS playlistsongs 
+	(
+		idplaylistsong INTEGER PRIMARY KEY, 
+		idplaylist     INTEGER REFERENCES playlists (idplaylist), 
+		idsong         INTEGER REFERENCES songs (id) 
+	);'
 );
 
 $db->exec(
-'CREATE TABLE Playlists (IDPlaylist INTEGER PRIMARY KEY, PlaylistName TEXT);'
+'CREATE TABLE IF NOT EXISTS playlists 
+	( 
+		idplaylist   INTEGER PRIMARY KEY, 
+		playlistname TEXT 
+	);'
 );
 
 ?>
