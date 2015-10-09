@@ -1,5 +1,7 @@
 [![Stories in Ready](https://badge.waffle.io/frozenshadow/Music-Server-Develop.png?label=ready&title=Ready)](https://waffle.io/frozenshadow/Music-Server-Develop)
 [![In Progress](https://badge.waffle.io/frozenshadow/Music-Server-Develop.png?label=in%20progress&title=In%20Progress)](https://waffle.io/frozenshadow/Music-Server-Develop)
+[![Help wanted](https://badge.waffle.io/frozenshadow/Music-Server-Develop.png?label=help%20wanted&title=Help%20wanted)](https://waffle.io/frozenshadow/Music-Server-Develop)
+
 Music Server To-do
 ==================
 
