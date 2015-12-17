@@ -1,0 +1,15 @@
+{
+  "name": "flac",
+  "_cacheHeaders": {
+    "ETag": "\"502db01a0b520a9cfada2fa09b64ac94\"",
+    "Last-Modified": "Fri, 29 Aug 2014 15:25:56 GMT",
+    "Content-Length": "27543",
+    "Content-Type": "application/octet-stream",
+    "Content-Disposition": "attachment; filename=flac.js"
+  },
+  "_release": "e-tag:502db01a0",
+  "main": "index.js",
+  "_source": "https://github.com/audiocogs/flac.js/releases/download/v0.2.1/flac.js",
+  "_target": "*",
+  "_originalSource": "https://github.com/audiocogs/flac.js/releases/download/v0.2.1/flac.js"
+}

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66c30593-9491-4549-91a2-d391234db4ca" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/artist.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/All This.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/Americana.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/Black Vortex.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/Call to Adventure.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/Hitman.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/Return of Lazarus.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/The Complex.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/The Descent.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/crop.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/example.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/music/Kevin MacLeod/samplemusic/examples.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/playlists/playlist.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/css/cssreset-min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/css/jquery-ui-1.10.4.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/css/playlist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/customscroll/jquery.mCustomScrollbar.concat.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/customscroll/jquery.mCustomScrollbar.concat.min.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/customscroll/jquery.mCustomScrollbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/customscroll/mCSB_buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/controls.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/download.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/handle.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/info.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/lock.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/quality.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/server.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/settings.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/unknown_album.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/images/wrong.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/js/detectmobilebrowser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/js/jquery-2.1.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/js/jquery-2.1.0.min.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/js/jquery-ui-1.10.4.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/js/jquery.shuffle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/js/jquery.unveil.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/js/playlist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/bigplay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/bigplay.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/controls-ted.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/controls-wmp-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/controls-wmp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/controls.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/controls.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/mediaelement-and-player.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/mediaelement-and-player.min.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mediaelement/mediaelementplayer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/apple-touch-icon-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/css/mediaelementplayer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/buttons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/controls.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/fwdbck.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/action-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/action-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/alert-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/alert-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-d-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-d-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-d-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-d-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-d-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-d-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-u-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-u-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-u-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-u-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-u-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/arrow-u-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/audio-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/audio-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/back-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/back-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/bars-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/bars-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/bullets-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/bullets-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/calendar-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/calendar-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/camera-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/camera-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-d-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-d-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-u-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/carat-u-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/check-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/check-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/clock-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/clock-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/cloud-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/cloud-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/comment-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/comment-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/delete-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/delete-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/edit-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/edit-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/eye-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/eye-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/forbidden-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/forbidden-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/forward-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/forward-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/gear-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/gear-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/grid-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/grid-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/heart-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/heart-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/home-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/home-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/info-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/info-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/location-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/location-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/lock-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/lock-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/mail-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/mail-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/minus-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/minus-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/navigation-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/navigation-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/phone-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/phone-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/plus-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/plus-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/power-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/power-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/recycle-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/recycle-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/refresh-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/refresh-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/search-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/search-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/shop-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/shop-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/star-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/star-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/tag-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/tag-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/user-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/user-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/video-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-png/video-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/action-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/action-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/alert-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/alert-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-d-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-d-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-d-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-d-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-d-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-d-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-u-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-u-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-u-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-u-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-u-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/arrow-u-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/audio-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/audio-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/back-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/back-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/bars-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/bars-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/bullets-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/bullets-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/calendar-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/calendar-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/camera-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/camera-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-d-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-d-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-u-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/carat-u-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/check-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/check-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/clock-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/clock-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/cloud-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/cloud-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/comment-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/comment-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/delete-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/delete-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/edit-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/edit-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/eye-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/eye-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/forbidden-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/forbidden-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/forward-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/forward-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/gear-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/gear-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/grid-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/grid-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/heart-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/heart-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/home-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/home-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/info-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/info-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/location-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/location-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/lock-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/lock-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/mail-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/mail-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/minus-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/minus-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/navigation-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/navigation-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/phone-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/phone-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/plus-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/plus-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/power-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/power-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/recycle-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/recycle-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/refresh-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/refresh-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/search-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/search-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/shop-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/shop-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/star-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/star-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/tag-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/tag-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/user-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/user-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/video-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/icons-svg/video-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/server.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/shuffle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/unknown_album.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/images/wrong.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/js/playlist.mobile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/mobile/playlists/playlist.mobile.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/qtip/imagesloaded.pkg.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/qtip/imagesloaded.pkg.min.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/qtip/jquery.qtip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/qtip/jquery.qtip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/server/qtip/jquery.qtip.min.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/settings.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/musicserver/themes/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
+    <ignored path="4.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="4" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.026124818">
+              <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+              <folding>
+                <marker date="1449822254709" expanded="true" signature="950:1036" placeholder="SELECT playl..music_playlists..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/css/style.css" />
+        <option value="$PROJECT_DIR$/src/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true">
+    <gruntfile path="$PROJECT_DIR$/Gruntfile.js" />
+  </component>
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Music Server Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Music Server Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Music Server Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Music Server Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="4">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66c30593-9491-4549-91a2-d391234db4ca" name="Default" comment="" />
+      <created>1449749921079</created>
+      <option name="number" value="Default" />
+      <updated>1449749921079</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25578406" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding>
+            <marker date="1449822254709" expanded="true" signature="950:1036" placeholder="SELECT playl..music_playlists..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="183" column="19" selection-start-line="183" selection-start-column="19" selection-end-line="183" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1449822254709" expanded="true" signature="950:1036" placeholder="SELECT playl..music_playlists..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding>
+            <marker date="1449822254709" expanded="true" signature="950:1036" placeholder="SELECT playl..music_playlists..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026124818">
+          <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,58 @@
+{
+  "name": "music-server",
+  "version": "2.0.0",
+  "homepage": "https://github.com/frozenshadow/Music-Server",
+  "authors": [
+    {
+      "name": "Tom van der Leij",
+      "email": "contact@leijlandia.nl",
+      "homepage": "http://leijlandia.nl"
+    },
+    {
+      "name": "Jacky Koning"
+    }
+  ],
+  "description": "Update later!",
+  "keywords": [
+    "hoi",
+    "hoi2"
+  ],
+  "license": "GPLv3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "jQuery#2.*.*",
+    "aurora": "https://github.com/audiocogs/aurora.js/releases/download/v0.4.4/aurora.js",
+    "flac": "https://github.com/audiocogs/flac.js/releases/download/v0.2.1/flac.js",
+    "html5shiv": "latest",
+    "normalize-css": "normalize.css#latest"
+  },
+  "install": {
+    "path": "src/lib",
+    "sources": {
+      "jquery": "external/jquery/dist/jquery.min.js",
+      "aurora": {
+        "mapping": [
+          {
+            "external/aurora/index.js": "aurora.js"
+          }
+        ]
+      },
+      "flac": {
+        "mapping": [
+          {
+            "external/flac/index.js": "flac.js"
+          }
+        ]
+      },
+      "html5shiv": "external/html5shiv/dist/html5shiv.min.js",
+      "normalize-css": "external/normalize-css/normalize.css"
+    }
+  }
+}
