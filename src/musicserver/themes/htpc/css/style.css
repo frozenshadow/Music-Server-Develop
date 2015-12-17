@@ -1,0 +1,443 @@
+/*
+* Music Server HTPC Theme
+* Author: Tom van der Leij
+* Version: 1.0
+* License: MIT
+*
+* Project website: www.musicserver.leijlandia.nl
+* Personal website: www.leijlandia.nl
+*/
+
+/* ============================ Import Stylesheets ============================ */
+
+/*Normalize CSS*/
+@import url('//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css');
+
+/*jQuery UI (currently unused)*/
+/*@import url('../../../server/css/jquery-ui-1.10.4.custom.css');*/
+
+/*Malihu custom content scroller*/
+@import url('../../../server/customscroll/jquery.mCustomScrollbar.css');
+
+/*MediaElement.js*/
+@import url('../../../server/mediaelement/mediaelementplayer.css');
+
+/*Music Server CSS*/
+@import url('../../../server/css/playlist.css');
+
+/*qTip2*/
+@import url('../../../server/qtip/jquery.qtip.css');
+
+/* ========================== General CSS properties ========================== */
+
+/*Main page BEGIN*/
+html, body {
+	background-color: #cacaca;
+	font-family: Segoe UI, Arial;
+	height: 100%;
+	width: 100%;
+}
+
+.mCSB_container {
+margin-right: 15px !important;
+}
+/*Main page END*/
+
+/*Sidebar BEGIN*/
+#sidebar {
+    background-color: #323232;
+    float: left;
+    height: 662px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 250px;
+}
+
+#side-tracks {
+	margin-top: 10px;
+	height: 578px;
+	overflow: auto;
+}
+
+.mejs-list li {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    height: 63px;
+    margin: 10px 20px 20px;
+    position: relative;
+    width: 208px;
+}
+
+.mejs-list li:hover {
+	background-color: #215CAC;
+	cursor: pointer;
+}
+
+.mejs-list li.current {
+	background-color: #cddfff;
+}
+
+.mejs-list li img {
+    border-right: 1px solid #FFFFFF;
+    float: left;
+    height: 63px;
+    width: 63px;
+}
+
+.title, .aa {
+    left: 79px;
+    overflow: hidden;
+    position: absolute;
+    width: 119px;
+}
+
+.title {
+    font-size: 13px;
+    height: 19px;
+    top: 10px;
+}
+
+.aa {
+    font-size: 9px;
+    top: 31px;
+}
+
+#side-buttons {
+    border-top: 2px solid #FFFFFF;
+    bottom: 0;
+    height: 32px;
+    padding: 15px;
+    position: absolute;
+    width: 220px;
+}
+
+#settings, #download, #info, #lock, #quality, #more {
+	display: block;
+	float: left;
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+}
+
+#settings:hover, #download:hover, #info:hover, #lock:hover, #quality:hover, #more:hover {
+	background-position: -32px 0;
+}
+
+#settings {
+    background: url("../../../server/images/settings.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#download {
+    background: url("../../../server/images/download.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-left: 15px;
+}
+
+#info {
+    background: url("../../../server/images/info.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-left: 15px;
+}
+
+#more {
+    background: url("../../../server/images/more.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-left: 15px;
+}
+
+#lock {
+    background: url("../../../server/images/lock.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-left: 15px;
+}
+
+.locked {
+    background-position: 0 -32px !important;
+}
+
+.locked:hover {
+    background-position: -32px -32px !important;
+}
+
+#quality {
+    background: url("../../../server/images/quality.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-left: 15px;
+}
+
+.low {
+    background-position: 0 -32px !important;
+}
+
+.low:hover {
+    background-position: -32px -32px !important;
+}
+
+.mCSB_inside > .mCSB_container {
+    margin-right: 16px !important;
+}
+/*Sidebar END*/
+
+#background {
+    height: 100%;
+}
+
+#content-wrap {
+    float: right;
+    margin-top: 20px;
+    width: 690px;
+	height: 440px;
+}
+
+#content {
+    background-color: #999999;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #000000;
+    padding: 20px;
+	position: relative;
+}
+
+select {
+    max-width: 210px;
+    width: 100%;
+}
+
+input {
+	max-width: 210px;
+	width: 100%;
+}
+
+#contact-submit {
+    background: none repeat scroll 0 0 #39b54a;
+    border: 0 none;
+    color: #ffffff;
+    width: 100%;
+}
+
+#info-box {
+	background-color: #ffffff;
+    border: 3px solid #808080;
+    padding: 15px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 270px;
+}
+
+#tracklist {
+	display: none;
+}
+
+article {
+    font-size: 12pt;
+    padding: 0 20px;
+}
+
+#player-wrap {
+    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 145px;
+    height: 300px;
+    left: 50%;
+    padding: 5px;
+    position: absolute;
+    transform: translate(-50%);
+    width: 85%;
+}
+
+#player-wrap span {
+    margin-left: 40px;
+}
+
+.cover {
+    float: left;
+    height: 300px;
+    width: 300px;
+}
+
+.cover img {
+    height: 300px;
+    width: 300px;
+}
+
+.title-player {
+    margin-top: 40px;
+}
+
+.title-player, .artist-album {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ffffff;
+    bottom: 0;
+    clear: both;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+}
+
+.mejs-container {
+    left: 0;
+    top: -20px;
+}
+
+.mejs-container .mejs-controls .mejs-time {
+    height: auto;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 17px;
+    width: 100%;
+}
+
+.mejs-container .mejs-controls .mejs-time span {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+
+.mejs-duration-container {
+    left: auto !important;
+    right: 25px !important;
+}
+
+.mejs-duration {
+    float: right !important;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total {
+    margin: 0;
+}
+
+.mejs-controls .mejs-time-rail span {
+    height: 20px;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background-color: #999999;
+}
+
+.mejs-time-handle {
+    display: none !important;
+}
+
+.mejs-time-float {
+    display: none !important;
+}
+
+.mejs-currenttime-container {
+    left: 25px !important;
+    width: 98% !important;
+}
+
+/*Controls BEGIN*/
+.controls {
+    height: 87.5px;
+    margin: 0 auto;
+    padding-top: 12.5px;
+    position: relative;
+    width: 435px;
+}
+
+#menu, #prev, #play, #pause, #next, #shuffle {
+    background-image: url("../../../server/images/controls.svg");
+    background-size: 148px auto;
+    cursor: pointer;
+    height: 55px;
+    position: absolute;
+    width: 55px;
+	top: 22.5px
+}
+
+#menu {
+    background-position: 0 -112px;
+}
+
+#menu:hover {
+	background-position: -42px -112px;
+}
+
+#prev {
+    background-position: 0 -149px;
+    left: 90px;
+}
+
+#prev:hover {
+	background-position: -42px -112px;
+}
+
+#play {
+    height: 75px;
+    margin: 0 auto;
+    position: unset;
+    width: 75px;
+}
+
+#play:hover {
+	background-position: -56px 0;
+}
+
+
+#pause {
+    background-position: 0 -56px;
+    display: none;
+    height: 55px;
+    left: 271px;
+    top: 10px;
+    width: 55px;
+}
+
+#pause:hover {
+	background-position: -56px -56px;
+}
+
+#next {
+    background-position: 0 -205px;
+    left: 290px;
+}
+
+#next:hover {
+    background-position: -42px -154px;
+}
+
+#shuffle {
+    background-position: 0 -261px;
+    left: 380px;
+}
+
+#shuffle:hover {
+	background-position: -42px -196px;
+}
+/*Controls END*/
+
+#qtip-growl-container{
+    position: fixed;
+    top: 10px; right: 10px;
+}
+
+#qtip-growl-container .qtip{
+        position: static;
+        min-height: 0;
+        overflow: hidden;
+        margin: 0 0 5px 0;
+    }
+
+/*Algemeen begin*/
+p {
+    font-size: 12pt;
+    margin-top: 16px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: black;
+}
+/*Algemeen end*/

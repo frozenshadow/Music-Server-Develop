@@ -1,0 +1,179 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Music Server - SERVERNAME</title>
+
+<!--Detect Mobile Browser OR screen size-->
+<script src="musicserver/server/js/detectmobile.min.js"></script>
+
+<!--JQUERY LIBARIES + HTML5 SHIV-->
+<!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="musicserver/server/js/jquery-ui-1.10.4.custom.min.js"></script>
+<link rel="stylesheet" href="musicserver/server/css/jquery-ui-1.10.4.custom.css">
+
+<link rel="stylesheet" href="musicserver/server/css/cssreset-min.css">
+
+<link rel="stylesheet" href="musicserver/server/css/style.css">
+
+<link href="musicserver/favicon.ico" type="image/x-icon" rel="shortcut icon">
+
+<!--jScrollPane-->
+<link href="musicserver/server/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet">
+<script src="musicserver/server/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--jQuery MobileButton-->
+<link href="musicserver/server/mobilebutton/jquery.mobilebutton.css" rel="stylesheet">
+<script src="musicserver/server/mobilebutton/jquery.mobilebutton.js"></script>
+
+<!--jQuery.cookie-->
+<script src="musicserver/server/js/jquery.cookie-1.4.1.min.js"></script>
+
+<!--PLAYLIST PLUGIN-->
+<script src="musicserver/server/js/jquery.musicserver-player.js"></script>
+<script src="musicserver/server/js/jquery.musicserver.js"></script>
+<link href="musicserver/server/qtip/jquery.qtip.css" rel="stylesheet">
+<script src="settings.json"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<div id="sidebar">
+        	<div id="side-tracks">
+                <ul class="mejs-list">
+                </ul>
+			</div>
+        	<div id="side-buttons">
+				<a id="settings" title="Configure Music Server"></a>
+				<a id="info" title="How to use Music Server"></a>
+				<a id="quality" title="Set music quality to low" Class="high"></a>
+				<!--<a id="download" title="Download current song"></a>-->
+				<a id="lock" title="Lock the playlist"></a>
+                <a id="more" title="View more options"></a>
+            </div>
+        </div>
+    	<header>
+			<div id="logo">
+            </div>
+            <div id="headertext">
+                <span></span>
+            </div>
+        </header>
+        <div id="content-wrap">
+        	<div style="height:440px;">
+            	<img src="//earthenergyreader.files.wordpress.com/2014/02/british_convoy_of_sixty-three_ships_and_all_but_eight_ships_captured_by_spanish_and_french_under_cordova.jpg?w=690&h=440">
+            </div>
+            <div id="content" style="display:none">
+            	<div id="more-options">
+                	<img src="//earthenergyreader.files.wordpress.com/2014/02/british_convoy_of_sixty-three_ships_and_all_but_eight_ships_captured_by_spanish_and_french_under_cordova.jpg?w=10&h=10">
+                </div>
+            	<div id="config" style="display:none;">
+                    <table>
+                        <tbody>
+                        	<tr>
+                              <td style="padding-right: 15px;"><span>Server name:</span></td>
+                                <td style="padding: 3px;"><input name="servername" type="text" required id="servername-input"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 15px;"><span>Lay-out:</span></td>
+                                <td style="padding: 3px;"><select id="layout-select" onchange="location=this.options[this.selectedIndex].value;">
+                                    <option>Default</option>
+                                </select></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #000;">
+                                <td style="padding-right: 15px;"><span>Middle:</span></td>
+                                <td style="padding: 3px;"><select id="middle-select">
+                                    <option selected value="artist">Artist</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 15px;"><span>Playlist:</span></td>
+                                <td style="padding: 3px;"><select id="playlist-select">
+                                    <option selected value="allitems">Default</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 15px;"><span>Email:</span></td>
+                                <td style="padding: 3px;"><input id="contact-input" name="email" required type="email"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 3px;"></td>
+                                <td style="padding: 3px;"><input id="contact-submit" name="submit" type="submit" value="Confirm"></td>
+                            </tr>
+                            <tr><td><br></td></tr>
+                            <tr>
+                                <td style="padding-right: 15px;"><span>Live edit mode</span></td>
+                                <td style="padding: 3px;" class="checkbox"><input type="checkbox" id="check1"></td>
+                            </tr>
+                            <!--<tr>
+                                <td style="padding: 3px;"><span>Volume slider</span></td>
+                                <td style="padding: 3px;" class="checkbox"><input type="checkbox" id="check2" checked></td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+                    <div id="info-box">
+                        <span><b>Create you own customized lay-out</b><br>by dragging individual elements to their desired location.</span>
+                    </div>
+                </div>
+                <div id="information" style="display:none;">
+                	<span>Double click on a song from the playlist to play<br>Press SPACE to play/pause<br>Press ESCAPE to quick pause<br>Press left/right key to play the previous/next song<br><br><b>Tip!:</b> you can customize your playlist by dragging the desired song to the desired location in your playlist.</span>
+                </div>
+			</div>
+        </div>
+
+        <div id="player-wrap">
+        	<div class="title-player"><span></span></div>
+            <div class="artist-album"><span></span></div>
+			<div class="cover"></div>
+            <div class="audio-player">
+                <div class="controls">
+                    <div id="prev" title="Previous song"></div>
+                    <div id="play" title="Play song"></div>
+					<div id="pause" title="Pause song"></div>
+                    <div id="next" title="Next song"></div>
+                    <div id="shuffle" title="Shuffle playlist"></div>
+                    <div id="mute" title="Mute audio"></div>
+                    <div class="currenttime"><span>00:00</span></div>
+                    <div class="duration"><span>00:00</span></div>
+                    <div class="bottomrail">
+                        <div class="progress"></div>
+                        <div class="currentrail"></div>
+                        <div id="popup" style="display: none;"></div>
+                        <div class="handle"></div>
+                    </div>
+                    <div class="volume">
+                        <div class="current-volume"></div>
+                        <div class="volume-handle"></div>
+                    </div>
+                </div>
+                <audio id="mejs" src="dummy" type="audio/wav" onerror="$('#next').click();createGrowl();"></audio>
+            </div>
+        </div>
+	</div>
+
+    <footer>
+    	<div id="copyright">
+        	<span>Thank you for using Music Server 1.2.0 | <a href="#" target="_blank">Feedback</a> | <a href="https://github.com/frozenshadow/Music-Server-Develop/wiki" target="_blank">Documentation</a></span>
+        </div>
+    </footer>
+    
+    <div id="qtip-growl-container"></div>
+    
+<script>
+var audioPlayer = document.getElementsByTagName('audio')[0]; // Get 'audio' element
+
+$('html').MusicServer({
+});
+
+$('.checkbox input').checkbox({
+    className: 'jquery-switch',
+    checkedClass: 'jquery-switch-on'
+});
+</script>
+</body>
+</html>

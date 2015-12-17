@@ -1,0 +1,133 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Music Server - HTPC</title>
+
+<!--Detect Mobile Browser OR screen size-->
+<script src="js/detectmobile.min.js" /></script>
+
+<!--JQUERY LIBARIES + HTML5 SHIV-->
+<!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<![endif]-->
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<link href="../../favicon.ico" type="image/x-icon" rel="shortcut icon">
+
+<!--jQuery UI-->
+<script src="../../server/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+<!--Malihu custom content scroller + MediaElement.js-->
+<script src="../../server/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../server/mediaelement/mediaelement-and-player.min.js"></script>
+
+<!--Music Server scripts-->
+<script src="../../../settings.json"></script>
+<script src="../../server/js/jquery.musicserver.js"></script>
+</head>
+
+<body>
+    <div id="sidebar" style="display:none;">
+        <div id="side-tracks">
+            <ul class="mejs-list">
+            </ul>
+        </div>
+        <div id="side-buttons">
+            <a id="settings" onClick="loadconfig()" title="Configure Music Server"></a>
+            <a id="info" onClick="Alert()" title="How to use Music Server"></a>
+            <a id="quality" title="Set music quality to low" Class="high"></a>
+            <a id="download" title="Download current song"></a>
+            <a id="lock" title="Lock the playlist"></a>
+        </div>
+    </div>
+    <div id="content-wrap" style="display:none;">
+        <div id="content">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="padding-right: 15px;"><span>Lay-out:</span></td>
+                        <td style="padding: 3px;"><select id="layout-select" onchange="location=this.options[this.selectedIndex].value;">
+                            <option>HTPC</option>
+                        </select></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000;">
+                        <td style="padding-right: 15px;"><span>Middle:</span></td>
+                        <td style="padding: 3px;"><select id="middle-select">
+                            <option selected value="artist">Artist</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 15px;"><span>Playlist:</span></td>
+                        <td style="padding: 3px;"><select id="playlist-select">
+                            <option selected value="allitems">Default</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 3px;"><span>Email:</span></td>
+                        <td style="padding: 3px;"><input id="contact-input" name="email" required type="email"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 3px;"></td>
+                        <td style="padding: 3px;"><input id="contact-submit" name="submit" type="submit" value="Confirm"></td>
+                    </tr>
+                    <tr><td><br></td></tr>
+                    <tr>
+                        <td style="padding: 3px;"><span>Live edit mode</span></td>
+                        <td style="padding: 3px;" class="checkbox"><input type="checkbox" id="check1"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 3px;"><span>Volume slider</span></td>
+                        <td style="padding: 3px;" class="checkbox"><input type="checkbox" id="check2" checked></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="info-box">
+                <span><b>Create you own customized lay-out</b><br>by dragging individual elements to their desired location.</span>
+            </div>
+        </div>
+    </div>
+    <div id="player-wrap">
+    	<div class="cover"></div>
+        <div class="title-player"><span></span></div>
+        <div class="artist-album"><span></span></div>
+    </div>
+
+    <footer>
+    	<div class="audio-player">
+        	<audio style="width:100%;" id="mejs" src="dummy" type="audio/wav" onerror="$('#next').click();createGrowl();" controls></audio>
+            <div class="controls">
+            	<div id="menu" title="Show menu"></div>
+                <div id="prev" title="Previous song"></div>
+                <div id="play" title="Play audio"></div>
+                <div id="pause" title="Pause audio"></div>
+                <div id="next" title="Next song"></div>
+                <div id="shuffle" title="Shuffle songs"></div>
+            </div>
+        </div>
+    </footer>
+    
+    <div id="qtip-growl-container"></div>
+    
+    <div id="background"></div>
+    
+<script>
+$("html").MusicServer({
+	shuffle_location: "../../server/js/jquery.shuffle.min.js",
+	qtip_location: ["../../server/qtip/jquery.qtip.min.js", "../../server/qtip/imagesloaded.pkg.min.js"],
+	unveil_location: "../../server/js/jquery.unveil.js",
+	mainimage_folder: "../../server/images/",
+	music_folder: "../../../music"
+});
+
+$('audio').mediaelementplayer({
+	features: ['current','progress','duration','tracks'],
+	audioHeight: 20
+});
+</script>
+</body>
+</html>

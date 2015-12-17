@@ -1,0 +1,340 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?m8qvzt');
+	src: url('../fonts/icomoon.eot?m8qvzt#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?m8qvzt') format('truetype'), url('../fonts/icomoon.woff?m8qvzt') format('woff'), url('../fonts/icomoon.svg?m8qvzt#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    background: url("//musicserver.leijlandia.nl/wolfcms/public/themes/musicserverv1/images/logo.png") no-repeat scroll center 15% / auto 15%;
+    font-family: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+}
+
+/*
+*	Sidebar
+*/
+aside {
+    width: 280px;
+    background-color: #323232;
+    float: left;
+}
+
+#top-box {
+    width: 100%;
+    padding: 15px 30px;
+}
+
+#logo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#search {
+    background-color: #ffffff;
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+#search input {
+    background-color: #fff;
+    border: medium none;
+    left: 15px;
+    padding: 9px 0;
+    position: absolute;
+    width: 190px;
+}
+
+#search a {
+    background: url("../musicserver/server/images/more.svg") repeat scroll 0 0 darkred;
+    bottom: 0;
+    cursor: pointer;
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 20px;
+}
+
+#playlist {
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+#side-buttons {
+    border-top: 2px solid #ffffff;
+    width: 100%;
+    height: 66px;
+    background-color: red;
+}
+
+#side-buttons ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#side-buttons ul li {
+    display: inline-block;
+    padding: 8px;
+    width: 37px;
+}
+
+#settings, #download, #info, #lock, #quality, #more {
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+#settings:hover, #download:hover, #info:hover, #lock:hover, #quality:hover, #more:hover {
+	background-position: -32px 0;
+}
+
+#settings {
+    background: url("../musicserver/server/images/settings.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#download {
+    background: url("../musicserver/server/images/download.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#info {
+    background: url("../musicserver/server/images/info.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#more {
+    background: url("../musicserver/server/images/more.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#lock {
+    background: url("../musicserver/server/images/lock.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.locked {
+    background-position: 0 -32px !important;
+}
+
+.locked:hover {
+    background-position: -32px -32px !important;
+}
+
+#quality {
+    background: url("../musicserver/server/images/quality.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.low {
+    background-position: 0 -32px !important;
+}
+
+.low:hover {
+    background-position: -32px -32px !important;
+}
+
+/*
+*	Meta information block
+*/
+#main {
+    float: right;
+    position: relative;
+}
+
+#now-playing {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    bottom: 45px;
+    left: 0;
+    margin: 0 auto;
+    padding: 5px;
+    position: absolute;
+    border-collapse: separate;
+    color: #fff;
+    right: 0;
+    width: 84.146341463414634146341463414634%;
+}
+
+#cover {
+    vertical-align: middle;
+    height: 100%;
+    display: block;
+}
+
+#meta-wrap {
+    color: #ffffff;
+    font-size: 94%;
+    vertical-align: middle;
+    display: inline-block;
+    width: 73%;
+}
+
+.meta.left {
+    font-weight: bold;
+    padding: 2.454991816693944353518821603928% 0 2.454991816693944353518821603928% 30px;
+    vertical-align: top;
+}
+
+#genre {
+    font-size: 72%;
+    font-weight: normal;
+}
+
+.meta.right {
+    text-align: right;
+    padding: 2.454991816693944353518821603928% 25px 2.454991816693944353518821603928% 0;
+    vertical-align: top;
+}
+
+/*
+*	Player
+*/
+footer {
+    background-color: #ffffff;
+    height: 90px;
+    width: 100%;
+    clear: both;
+}
+
+#seekbar {
+    background-color: #999999;
+    height: 16.666666666666666666666666666667%;
+    width: 100%;
+}
+
+#current {
+    background-color: #0071bc;
+    height: 100%;
+    width: 25%;
+}
+
+#controls {
+    height: 83.333333333333333333333333333333%;
+    position: relative;
+    width: 100%;
+}
+
+#currenttime, #duration {
+    color: #000000;
+    font-size: 146%;
+    font-weight: bold;
+}
+
+#currenttime {
+    left: 1.3%;
+    position: absolute;
+}
+
+#duration {
+    position: absolute;
+    right: 1.3%;
+}
+
+#list, #prev, #play, #pause, #next, #shuffle {
+    bottom: 23.36%;
+    cursor: pointer;
+    font-size: 200%;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 4%;
+}
+
+#list {
+    right: 26.9%;
+}
+
+.icon-list:before {
+	content: "\e800";
+}
+.icon-prev:before {
+	content: "\e801";
+}
+.icon-play:before {
+	content: "\e802";
+}
+.icon-pause:before {
+	content: "\e803";
+}
+.icon-next:before {
+	content: "\e804";
+}
+.icon-shuffle:before {
+	content: "\e805";
+}
+.icon-mute:before {
+	content: "\e806";
+}
+.icon-unmuted:before {
+	content: "\e807";
+}
+
+#prev {
+    right: 14.2%;
+}
+
+#play, #pause {
+    bottom: 12.1%;
+    font-size: 291%;
+    height: 72.2%;
+    width: 5.9%;
+}
+
+#next {
+    left: 14.2%;
+}
+
+#shuffle {
+    left: 26.9%;
+}
+
+#mute {
+    bottom: 39.7%;
+    font-size: 98%;
+    left: 39.2%;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 3%;
+}
+
+#volumebar {
+    background-color: #999999;
+    bottom: 49%;
+    height: 6.1%;
+    left: 55.2%;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 12.2%;
+}
+
+#currentvolume {
+    background-color: #0071bc;
+    height: 100%;
+    width: 60%;
+}
