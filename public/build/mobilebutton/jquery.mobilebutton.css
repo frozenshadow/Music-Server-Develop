@@ -1,0 +1,17 @@
+.jquery-switch-wrapper {
+	width: 63px;
+	height: 25px;
+}
+
+.jquery-switch-wrapper a.jquery-switch {
+	background: url("switches.svg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	display: block;
+	width: 63px;
+	height: 25px;
+	cursor: pointer;
+	outline: none;
+}
+
+.jquery-switch-wrapper a.jquery-switch-on {
+	background-position: 0px 25px;
+}
